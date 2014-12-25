@@ -23,18 +23,17 @@
 \label{eq:equation3_2}
  R_{7} = (30\ldots 50)\cdot R_{н} = 40 \cdot 4 = 100~\text{Ом}
 \end{equation}
-
 Резистор R7 включается в цепь для того, чтобы не закорачивать источник питания конденсатором С3, обеспечивающим включение в выходную цепь транзистора динамической нагрузки R6. Основное усиление напряжения происходит за счет динамической нагрузки R6, потому резистор R7 выбирается малой величины.
 
 \subsubsection{Выбор резистора R6:} 
 \begin{equation}
-\label{eq:equation3_2}
+\label{eq:equation3_3}
  R_{6} = (E_{0}– U_{\text{БЭ5}} – I_{\text{О К3}} \cdot R_7)/I_{\text{0 К3}} = (15 – 0.6 – 0.023 \cdot 100)/0.02 = 100~\text{Ом}
 \end{equation}
 
 При прохождении сигнала динамическое сопротивление R6 будет определяться:
 \begin{equation}
-\label{eq:equation3_3}
+\label{eq:equation3_4}
  R_{\text{6Д}} = \dfrac{R_6}{1-K_{\text{ОК}}} = 10 \cdot 542.212 = 100~\text{Ом}
 \end{equation}
 
@@ -44,17 +43,17 @@
 \subsubsection{Определение емкости C3:} 
 Эта емкость устраняет протекание переменного тока по цепи R6 – R7 – земля и увеличивает коэффициент усиления каскада. Обеспечивает связь транзистора VT3 с нагрузкой R6 через оконечный каскад. \par
 \begin{equation}
-\label{eq:equation3_4}
+\label{eq:equation3_5}
  C_3 \geq \dfrac{5 \ldots 10}{2 \pi f_{\text{н}} (R_7 + R_{\text{н}})} geq \dfrac{5}{2 \pi 18 (52 + 52)} geq 654~\text{мкФ}
 \end{equation}
 
 \subsubsection{Параметры выбора транзистора VT3:}
 \begin{equation}
-\label{eq:equation3_5}
+\label{eq:equation3_6}
 P_{\text{к доп}} = (1.2 \ldots 1.5) P_{\text{к 3}} = (1.2 \ldots 1.5) \cdot \dfrac{E_0 I_{\text{0 кз}}}{2} = 1.3 \cdot \dfrac{16 0.02}{2} = 0.025~\text{Вт}
 \end{equation}
 
 \begin{equation}
-\label{eq:equation3_6}
+\label{eq:equation3_7}
 I_{\text{к 3m}} = I_{\text{О КЗ}} + \dfrac{I_{\text{нм}}}{h_21} = 0.013 + \dfrac{2.54}{600} = 0.024~\text{А}
 \end{equation}
