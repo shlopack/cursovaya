@@ -136,3 +136,39 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
 \label{eq:equation3_17}
  K = R_{\text{КН3}} / r_{\text{э3}} = (R_{\text{ВХ4}} ( R_{\text{6Д}} + К_7)) / r_{\text{э3}} = (h_{21} R_{н}) / r_{\text{э3}} = (600 \cdot 2) / 0.625 = 1920
 \end{equation}
+
+Входное сопротивление оконечных каскадов состоит из малого входного сопротивления транзистора по схеме с общим эмиттером и сопротивлением, учитывающим влияние местной ООС, тем самым увеличивая входное сопротивление.  Влияние R9 и R10 , ввиду их малости, можно не учитывать. \par
+
+\subsubsection{Итоговые данные предоконечного каскада:}
+
+\begin{table}[htbp]
+\caption{Параметры выбора транзистора}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+\hline 
+VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
+\hline 
+VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+\clearpage
+
+\begin{table}[htbp]
+\caption{Режимы работы транзистора}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+\hline 
+VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
+\hline 
+VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+\clearpage
