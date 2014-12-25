@@ -1,0 +1,1 @@
+template = 'F \geq \dfrac{%.2f}{%.2f} = %.1f'%(0.15,K_g, F)

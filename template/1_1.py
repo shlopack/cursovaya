@@ -1,0 +1,1 @@
+template = 'K_{\\text{Е}} =  \dfrac{\sqrt{%.0f \cdot %.0f }}{%.3f} = %.3f'%(P_n,R_n,E_g,K_e)

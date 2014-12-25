@@ -1,0 +1,1 @@
+template = 'I_{\\text{км}} = I_{\\text{нм}} = \dfrac{%.2f}{%.0f} = %.2f ~ \\text{А}'%(U_nm, R_n, I_nm)

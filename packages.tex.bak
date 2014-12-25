@@ -1,0 +1,117 @@
+%%% Поля и разметка страницы %%%
+\usepackage{lscape}		% Для включения альбомных страниц
+\usepackage{geometry}	% Для последующего задания полей
+
+%%% Кодировки и шрифты %%%
+\usepackage{mathtext}
+\usepackage{cmap}						% Улучшенный поиск русских слов в полученном pdf-файле
+\usepackage[T2A]{fontenc}				% Поддержка русских букв
+\usepackage[utf8]{inputenc} % UTF-8: PDFLaTeX
+\usepackage[english, russian]{babel}	% Языки: русский, английский
+%% \usepackage{pscyr}						% Красивые русские шрифты
+
+%%% Математические пакеты %%%
+\usepackage{amsthm,amsfonts,amsmath,amssymb,amscd} % Математические дополнения от AMS
+\usepackage{gensymb}
+
+%%% Оформление абзацев %%%
+\usepackage{indentfirst} % Красная строка
+
+%%% Цвета %%%
+\usepackage[usenames]{color}
+\usepackage{color}
+\usepackage{colortbl}
+
+%%% Таблицы %%%
+\usepackage{longtable}					% Длинные таблицы
+\usepackage{multirow,makecell,array}	% Улучшенное форматирование таблиц
+
+%%% Общее форматирование
+\usepackage{caption}
+\captionsetup[figure]{labelsep=period,justification=centering,singlelinecheck=false}
+
+\usepackage{soul}									% Поддержка переносоустойчивых подчёркиваний и зачёркиваний
+\usepackage{multicol}
+
+%%% Библиография %%%
+\usepackage{cite} % Красивые ссылки на литературу
+
+%%% Гиперссылки %%%
+\usepackage[unicode,plainpages=false,pdfpagelabels=false]{hyperref}
+
+%%% Изображения %%%
+\usepackage{graphicx} % Подключаем пакет работы с графикой
+\usepackage{textcase}
+
+\usepackage[tableposition=top]{caption}
+\usepackage{subcaption}
+\usepackage{titlesec}
+\usepackage{enumitem}
+
+\ProvidesPackage{mathgrk}
+\DeclareFontFamily{U}{gr}{}
+\DeclareFontFamily{U}{grb}{}
+\DeclareFontShape{U}{gr}{m}{n}{<-> omsegr}{}
+\DeclareFontShape{U}{gr}{m}{it}{<-> omsegri}{}
+\DeclareFontShape{U}{grb}{b}{n}{<-> omsegrb}{}
+\DeclareFontShape{U}{grb}{b}{it}{<-> omsegrbi}{}
+\DeclareSymbolFont{greek}{U}{gr}{m}{n}
+\SetSymbolFont{greek}{normal}{U}{gr}{m}{n}
+\SetSymbolFont{greek}{bold}{U}{grb}{b}{n}
+\DeclareMathSymbol{\alpha}{0}{greek}{"61}
+\DeclareMathSymbol{\beta}{0}{greek}{"62}
+\DeclareMathSymbol{\gamma}{0}{greek}{"67}
+\DeclareMathSymbol{\delta}{0}{greek}{"64}
+\DeclareMathSymbol{\epsilon}{0}{greek}{"65}
+\DeclareMathSymbol{\zeta}{0}{greek}{"7A}
+\DeclareMathSymbol{\eta}{0}{greek}{"68}
+\DeclareMathSymbol{\theta}{0}{greek}{"6A}
+\DeclareMathSymbol{\iota}{0}{greek}{"69}
+%\DeclareMathSymbol{\kappa}{0}{greek}{"35}
+\DeclareMathSymbol{\kappa}{0}{greek}{"6B}
+\DeclareMathSymbol{\lambda}{0}{greek}{"6C}
+\DeclareMathSymbol{\mu}{0}{greek}{"6D}
+\DeclareMathSymbol{\nu}{0}{greek}{"6E}
+\DeclareMathSymbol{\xi}{0}{greek}{"78}
+\DeclareMathSymbol{\omicron}{0}{greek}{"6F}
+\DeclareMathSymbol{\pi}{0}{greek}{"70}
+\DeclareMathSymbol{\rho}{0}{greek}{"72}
+\DeclareMathSymbol{\sigma}{0}{greek}{"73}
+\DeclareMathSymbol{\tau}{0}{greek}{"74}
+\DeclareMathSymbol{\phi}{0}{greek}{"66}
+%\DeclareMathSymbol{\phi}{0}{greek}{"33}
+\DeclareMathSymbol{\chi}{0}{greek}{"71}
+\DeclareMathSymbol{\ipsilon}{0}{greek}{"75}
+\DeclareMathSymbol{\psi}{0}{greek}{"79}
+\DeclareMathSymbol{\omega}{0}{greek}{"77}
+\DeclareMathSymbol{\Alpha}{0}{greek}{"41}
+\DeclareMathSymbol{\Beta}{0}{greek}{"42}
+\DeclareMathSymbol{\Gamma}{0}{greek}{"47}
+\DeclareMathSymbol{\Delta}{0}{greek}{"44}
+\DeclareMathSymbol{\Epsilon}{0}{greek}{"45}
+\DeclareMathSymbol{\Zeta}{0}{greek}{"5A}
+\DeclareMathSymbol{\Eta}{0}{greek}{"48}
+\DeclareMathSymbol{\Theta}{0}{greek}{"4A}
+\DeclareMathSymbol{\Kappa}{0}{greek}{"4B}
+\DeclareMathSymbol{\Lambda}{0}{greek}{"4C}
+\DeclareMathSymbol{\Mu}{0}{greek}{"4D}
+\DeclareMathSymbol{\Nu}{0}{greek}{"4E}
+\DeclareMathSymbol{\Xi}{0}{greek}{"58}
+\DeclareMathSymbol{\Omicron}{0}{greek}{"4F}
+\DeclareMathSymbol{\Pi}{0}{greek}{"50}
+\DeclareMathSymbol{\Rho}{0}{greek}{"52}
+\DeclareMathSymbol{\Sigma}{0}{greek}{"53}
+\DeclareMathSymbol{\Tau}{0}{greek}{"54}
+\DeclareMathSymbol{\Phi}{0}{greek}{"46}
+\DeclareMathSymbol{\Chi}{0}{greek}{"51}
+\DeclareMathSymbol{\Ipsilon}{0}{greek}{"55}
+\DeclareMathSymbol{\Omega}{0}{greek}{"57}
+\DeclareMathSymbol{\varbeta}{0}{greek}{"31}
+\DeclareMathSymbol{\vartheta}{0}{greek}{"32}
+%\DeclareMathSymbol{\varkappa}{0}{greek}{"6B}
+\DeclareMathSymbol{\varkappa}{0}{greek}{"35}
+\DeclareMathSymbol{\varrho}{0}{greek}{"34}
+\DeclareMathSymbol{\varphi}{0}{greek}{"33}
+%\DeclareMathSymbol{\varphi}{0}{greek}{"66}
+\DeclareMathSymbol{\varsigma}{0}{greek}{"63}
+\DeclareMathSymbol{\varIpsilon}{0}{greek}{"30} 

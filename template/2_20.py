@@ -1,0 +1,1 @@
+template = 'R_{\\text{вх}} = (1 + h_{21}) R_{\\text{н}} = (1 + %.0f) \cdot %.0f = %.2f~\\text{Ом.}'%(h_21, R_n, R_vh)

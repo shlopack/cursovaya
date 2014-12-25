@@ -1,0 +1,1 @@
+template = 'U_{\\text{нм}} = \sqrt{ 2 \cdot %.0f \cdot %.0f } = %.2f ~ \\text{В}'%(P_n,R_n,U_nm)

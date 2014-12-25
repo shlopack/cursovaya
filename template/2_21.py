@@ -1,0 +1,1 @@
+template = 'R_{\\text{9}} = R_{\\text{10}} = 0.1 \cdot %.0f = %.3f'%(R_n, R9)

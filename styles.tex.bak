@@ -1,0 +1,173 @@
+%%% Макет страницы %%%
+\geometry{a4paper,top=2cm,bottom=2.7cm,left=3cm,right=1.5cm}
+
+
+%%% Кодировки и шрифты %%%
+\renewcommand{\rmdefault}{ftm} % Включаем Times New Roman
+
+\setlength\parindent{1.25cm}
+
+%%% Выравнивание и переносы %%%
+\sloppy					% Избавляемся от переполнений
+\clubpenalty=10000		% Запрещаем разрыв страницы после первой строки абзаца
+\widowpenalty=10000		% Запрещаем разрыв страницы после последней строки абзаца
+
+%%% Библиография %%%
+\makeatletter
+\bibliographystyle{utf8gost705u}	% Оформляем библиографию в соответствии с ГОСТ 7.0.5
+\renewcommand{\@biblabel}[1]{[#1]}	% Заменяем библиографию с квадратных скобок на точку:
+\makeatother
+
+%%% Изображения %%%
+\graphicspath{{images/}} % Пути к изображениям
+
+%%% Настройки нумерации %%%
+
+\renewcommand{\thefigure}{\thesection.\arabic{figure}}
+\renewcommand{\thetable}{\thesection.\arabic{table}}
+
+\makeatletter
+  \newcommand\Largev{\@setfontsize\Largev{16pt}{16}}
+\makeatother
+
+\makeatletter
+\def\section{\@ifstar\unnumberedsection\numberedsection}
+\def\numberedsection{\@ifnextchar[%]
+  \numberedsectionwithtwoarguments\numberedsectionwithoneargument}
+\def\unnumberedsection{\@ifnextchar[%]
+  \unnumberedsectionwithtwoarguments\unnumberedsectionwithoneargument}
+\def\numberedsectionwithoneargument#1{\numberedsectionwithtwoarguments[#1]{#1}}
+\def\unnumberedsectionwithoneargument#1{\unnumberedsectionwithtwoarguments[#1]{#1}}
+\def\numberedsectionwithtwoarguments[#1]#2{%
+  \ifhmode\par\fi
+  \removelastskip
+  \vskip 3ex\goodbreak
+  \refstepcounter{section}%
+  \begingroup
+  \setcounter{figure}{0}
+  \setcounter{table}{0}
+  \setcounter{equation}{0}
+  \leavevmode\Largev\bfseries\raggedright
+    \thesection\ #2\par\nobreak
+  \endgroup
+  \vskip 0ex\nobreak
+  \addcontentsline{toc}{section}{%
+    \protect\numberline{\thesection}%
+    #1}%
+  }
+\def\unnumberedsectionwithtwoarguments[#1]#2{%
+  \ifhmode\par\fi
+  \removelastskip
+  \vskip 3ex\goodbreak
+%  \refstepcounter{section}%
+  \noindent
+  \begingroup
+  \leavevmode\Largev\bfseries\raggedright
+  \leavevmode\Largev\bfseries\raggedright
+%  \thesection\quad
+  #2
+  \par
+  \endgroup
+  \vskip 2ex\nobreak
+  \addcontentsline{toc}{section}{%
+%    \protect\numberline{\thesection}%
+    #1}%
+}
+\makeatother
+
+
+\makeatletter
+\def\subsection{\@ifstar\unnumberedsubsection\numberedsubsection}
+\def\numberedsubsection{\@ifnextchar[%]
+  \numberedsubsectionwithtwoarguments\numberedsubsectionwithoneargument}
+\def\unnumberedsubsection{\@ifnextchar[%]
+  \unnumberedsubsectionwithtwoarguments\unnumberedsubsectionwithoneargument}
+\def\numberedsubsectionwithoneargument#1{\numberedsubsectionwithtwoarguments[#1]{#1}}
+\def\unnumberedsubsectionwithoneargument#1{\unnumberedsubsectionwithtwoarguments[#1]{#1}}
+\def\numberedsubsectionwithtwoarguments[#1]#2{%
+  \ifhmode\par\fi
+  \removelastskip
+  \vskip 1ex\goodbreak
+  \refstepcounter{subsection}%
+  \begingroup
+  \leavevmode\raggedright
+    \thesubsection\ #2\par\nobreak
+  \endgroup
+  \vskip 0ex\nobreak
+  \addcontentsline{toc}{subsection}{%
+    \protect\numberline{\thesubsection}%
+    #1}%
+  }
+\def\unnumberedsubsectionwithtwoarguments[#1]#2{%
+  \ifhmode\par\fi
+  \removelastskip
+  \vskip 3ex\goodbreak
+%  \refstepcounter{section}%
+  \noindent
+  \begingroup
+  \leavevmode\raggedright
+  \leavevmode\raggedright
+%  \thesection\quad
+  #2
+  \par
+  \endgroup
+  \vskip 2ex\nobreak
+  \addcontentsline{toc}{subsection}{%
+%    \protect\numberline{\thesection}%
+    #1}%
+}
+\makeatother
+
+\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}
+
+\usepackage{caption}
+%\DeclareCaptionLabelFormat{gostfigure}{#1 \textit{#2}}%
+%\DeclareCaptionLabelFormat{gosttable}{#1 \textit{#2}}%
+\DeclareCaptionLabelFormat{gostfigure}{#1 #2}
+\DeclareCaptionLabelFormat{gosttable}{#1 #2}
+\DeclareCaptionLabelFormat{gosttablepr}{Продолжение #2}
+\DeclareCaptionLabelSeparator{gost}{~---~}
+\captionsetup{labelsep=gost}
+\captionsetup[figure]{labelformat=gostfigure}
+\captionsetup[table]{labelformat=gosttable}
+\renewcommand{\thesubfigure}{\asbuk{subfigure}}
+\DeclareCaptionJustification{raggedright}{}
+
+\captionsetup[table]{textfont=normalfont,singlelinecheck=off,justification=raggedright,margin=2mm}
+\captionsetup[figure]{textfont=normalfont,singlelinecheck=off,labelsep=gost}
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[R]{\thepage}
+\fancyheadoffset{0mm}
+\fancyfootoffset{0mm}
+\setlength{\footskip}{17mm}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+    \fancyhf{}
+    \rhead{\thepage}}
+
+\renewcommand{\labelitemi}{~---~}
+\makeatletter
+\renewcommand{\@listI}{%
+\topsep=0pt }
+\makeatother
+
+\makeatletter
+\let\old@itemize=\itemize
+\def\itemize{\old@itemize
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftskip}{0pt}
+}
+\makeatother
+
+\makeatletter
+\let\old@enumerate=\enumerate
+\def\enumerate{\old@enumerate
+\setlength{\itemsep}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\leftskip}{0pt}
+}\makeatother

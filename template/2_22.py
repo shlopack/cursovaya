@@ -1,0 +1,1 @@
+template = 'C_{pn} = \dfrac{1}{2 \pi \cdot %.0f \cdot %.0f \sqrt{%.0f^2 - 1} } = %.3f~\\text{мФ}'%(f_l, R_n, M, C_pn)

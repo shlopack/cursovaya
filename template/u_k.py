@@ -1,0 +1,1 @@
+template = '%.1f'%(U_ke_d)
