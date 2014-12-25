@@ -1,0 +1,1 @@
+template = ' C_3 \geq \dfrac{5 \ldots 10}{2 \pi f_{\\\text{н}} (R_7 + R_{\\\text{н}})} geq \dfrac{5}{2 \pi %.0f (%.0f + %.0f)} geq %0.f~\\\text{мкФ}'%(f_l,R7,R_n,C3)
