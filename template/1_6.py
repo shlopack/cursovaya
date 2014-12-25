@@ -1,0 +1,1 @@
+template = ' R_{\\text{вх}} \geq 7 \cdot %.0f\ = %.0f ~\\text{кОм}'%(R_g,R_vh)

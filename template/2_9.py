@@ -1,0 +1,1 @@
+template = 'U_{\\text{кэ доп}} \geq 1,1 \cdot %.0f = %.1f ~ \\text{В}'%(E_0,U_ke_d)

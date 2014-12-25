@@ -1,0 +1,1 @@
+template = 'E_{\\text{0}} > (1,1 \cdot %.2f) = %.2f \\approx %.0f ~ \\text{В}'%(E_0r,E_00,E_0)

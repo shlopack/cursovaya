@@ -1,0 +1,1 @@
+template = 'K_{\\\text{Е тр}} \geq %.3f \cdot %.0f \cdot %.3f \cdot 2 \geq %.1f'%(K_e,F,m,K_e_tr)

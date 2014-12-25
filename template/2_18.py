@@ -1,0 +1,1 @@
+template = '\eta = \dfrac{P_{\\text{н}}}{P_0} = \dfrac{%.0f}{%.1f} = %.1f~\\text{\%}'%(P_n,P_0,eta)

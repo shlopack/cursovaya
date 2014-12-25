@@ -1,0 +1,1 @@
+template = 'P_{\\\text{к %.1f}} = \dfrac{ %.0f^2 }{ 4 \cdot 2 \cdot \pi^2} = %.2f ~ \\\text{Вт}'%(E_0,R_n,P_k_45)

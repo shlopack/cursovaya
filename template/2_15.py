@@ -1,0 +1,1 @@
+template = '\\text{КТ97Б:}~R_{\\text{t кс}} = \dfrac{150-%.0f}{%.2f} - 15,6 = %.2f~\\text{(C/Вт)}.~S = %.0f~(\\text{см}^2)'%(T_max, P_k_45, Rt_kc_2, S_2)

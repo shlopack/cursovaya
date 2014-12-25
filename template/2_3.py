@@ -1,0 +1,1 @@
+template = 'E_{\\text{0 расч}} > 2 (%.2f + 2) = %.2f ~ \\text{В}'%(U_nm,E_0r)

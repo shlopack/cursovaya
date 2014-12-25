@@ -1,0 +1,1 @@
+template = 'n \geq \dfrac{\lg( %.1f )}{\lg( 35 )} \geq %.2f \ approx %.0f'%(K_e_tr,n0,n)

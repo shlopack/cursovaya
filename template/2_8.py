@@ -1,0 +1,1 @@
+template = 'I_{\\text{к доп}} \geq 1,1 \cdot %.2f = %.3f ~ \\text{А}'%(I_nm,I_k_d)
