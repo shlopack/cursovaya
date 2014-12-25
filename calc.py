@@ -30,6 +30,7 @@ F = 0.15/K_g
 m = math.pow(10, (b/20))
 K_e_tr = K_e*F*m*2
 n = math.log(K_e_tr)/math.log(35)
+n0 = round(n, 0)
 R_vh = 7*R_g
 
 
@@ -82,7 +83,17 @@ R10 = R9
 
 C_pn = 1/(2*math.pi*f_l*R_n*math.sqrt(1.42*1.42-1))*1000
 
-print(h_11)
+#3
+
+I_o_kz = (2.5*I_nm)/h_21
+R7 = 40*R_n
+R6 = round(((E_0 - 0.6 - 0.023*R7)/0.02), 2)
+R6d = 10*R6
+C3 = (5)/(2*math.pi*f_l*(R7+R_n))*1000000
+P_k_3_d = 1.3*(E_0*0.02/2)
+I_k3m = 0.013 + I_nm/h_21
+
+print(I_k3m)
 
 names = ['2_1', '2_2', '2_19', '2_20', '2_21', '2_22']
 for name in names:
