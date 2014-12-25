@@ -1,1 +1,1 @@
-template = ' P_0 = I_0 \cdot E_0 = %.1f \cdot %.0f = %.1f~\\text{Вт}'%(I_0,E_0,P_0)
+template = 'P_0 = I_0 \cdot E_0 = %.1f \cdot %.0f = %.1f~\\text{Вт}'%(I_0,E_0,P_0)
