@@ -1,0 +1,1 @@
+template = 'P_{\\text{к доп}} = (1.2 \ldots 1.5) P_{\\text{к 3}} = (1.2 \ldots 1.5) \cdot \dfrac{E_0 I_{\\text{0 кз}}}{2} = 1.3 \cdot \dfrac{%.0f 0.02}{2} = %.0f~\\text{Вт}'%(E_0,P_k_3_d)
