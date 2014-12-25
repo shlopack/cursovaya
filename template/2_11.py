@@ -1,1 +1,1 @@
-template = 'f_{h_{21}}  \geq 2 \cdot %.0f\cdot 10^3 = %.0f ~ \\text{кГц}'%(f_h,fh_21)
+template = 'f_{h_{21}}  \geq 2 \cdot %.0f = %.0f ~ \\text{кГц}'%(f_h,fh_21)

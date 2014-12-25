@@ -41,7 +41,7 @@
 \end{equation}
 
 \begin{equation*}
- E_{\text{0}} > (1,1 \cdot 15,31) = 16.84 \approx 17 ~ \text{В}
+ \input{formulas/2_4}
 \end{equation*}
 
 \subsubsection{Максимальная мощность, рассеиваемая на коллекторах выходных транзисторов:}
@@ -52,7 +52,7 @@
 \end{equation}
 
 \begin{equation*}
- P_{\text{к 4,5}} = \dfrac{ 17^2 }{ 4 \cdot 2 \cdot \pi^2} = 3,66 ~ \text{Вт}
+ \input{formulas/2_5}
 \end{equation*}
 
 \subsubsection{Желаемый коэффициент усиления по току $h_{21}$ для выходных транзисторов:}
@@ -65,7 +65,7 @@
 \noindent где $ P_{\text{п}} = 10 \ldots 20 $ мВт -- выходная мощность предоконечного каскада, работающего в режиме А.\par	
 
 \begin{equation*}
- h_{\text{21 4,5}} \geq \dfrac{8}{0,02} = 400
+ \input{formulas/2_6}
 \end{equation*}
 
 Для получения в транзисторе такого h21 используют составные транзисторы или транзисторы Дарлингтона, у которых h21 итоговый равен произведению каждого из них.
@@ -77,7 +77,7 @@
  P_{\text{к доп}}  \geq (1,1 \ldots 1,2) P_{\text{к 4,5}}
 \end{equation}
 \begin{equation*}
- P_{\text{к доп}} \geq 1,1 \cdot 3,66 = 4,026 ~ \text{Вт}
+ \input{formulas/2_7}
 \end{equation*}
 
 \begin{equation}
@@ -85,7 +85,7 @@
  I_{\text{к доп}}  \geq (1,1 \ldots 1,3) I_{\text{нм}}
 \end{equation}
 \begin{equation*}
- I_{\text{к доп}} \geq 1,1 \cdot 2,82 = 3,102 ~ \text{А}
+ \input{formulas/2_8}
 \end{equation*}
 
 \begin{equation}
@@ -93,7 +93,7 @@
  U_{\text{кэ доп}}  \geq (1,1 \ldots 1,3) E_{\text{0}}
 \end{equation}
 \begin{equation*}
- U_{\text{кэ доп}} \geq 1,1 \cdot 17 = 18,7 ~ \text{В}
+ \input{formulas/2_9}
 \end{equation*}
 
 \begin{equation}
@@ -101,7 +101,7 @@
  h_{21}  \geq h_{\text{21 4,5}} = h_{\text{21 треб}}
 \end{equation}
 \begin{equation*}
- h_{21}  \geq h_{\text{21 4,5}} = 400
+ \input{formulas/2_10}
 \end{equation*}
 
 \begin{equation}
@@ -109,7 +109,7 @@
  f_{h_{21}}  \geq (2 \ldots 5) f_{\text{в}}
 \end{equation}
 \begin{equation*}
- f_{h_{21}}  \geq 2 \cdot 18\cdot 10^3 = 36 ~ \text{кГц}
+ \input{formulas/2_11}
 \end{equation*}
 
 \begin{table}[htbp]
@@ -140,26 +140,26 @@
 \end{equation}
 \begin{equation}
 \label{eq:equation2_14}
- \text{КТ972Б:}~R_{\text{t кс}} = \dfrac{135-40}{3,66} - 15,6 = 10,3~\text{(C/Вт)}.~S = 135~(\text{см}^2)
+ \input{formulas/2_14}
 \end{equation}
 \begin{equation}
 \label{eq:equation2_15}
- \text{КТ97Б:}~R_{\text{t кс}} = \dfrac{150-40}{3,66} - 15,6 = 14,4~\text{(C/Вт)}.~S = 97~(\text{см}^2)
+ \input{formulas/2_15}
 \end{equation}
 
 \subsubsection{Рабочие параметры транзистора:}
 
 \begin{equation}
 \label{eq:equation2_16}
- I_0 = \dfrac{I_{\text{нм}}}{\pi} = \dfrac{2,82}{3,14} = 0,9~\text{A}
+ \input{formulas/2_16}
 \end{equation}
 \begin{equation}
 \label{eq:equation2_17}
- P_0 = I_0 \cdot E_0 = 0,9 \cdot 17 = 15,3~\text{Вт}
+ \input{formulas/2_17}
 \end{equation}
 \begin{equation}
 \label{eq:equation2_18}
- \eta = \dfrac{P_{\text{н}}}{P_0} = \dfrac{8}{15,3} = 52,2~\text{\%}
+ \input{formulas/2_18}
 \end{equation}
 
 \subsubsection{Входное сопротивление:}

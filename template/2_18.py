@@ -1,1 +1,1 @@
-template = '\eta = \dfrac{P_{\\text{н}}}{P_0} = \dfrac{%.0f}{%.2f} = %.2f~'%(P_n,P_0,eta)+'\\text{\%}'
+template = '\eta = \dfrac{P_{\\text{н}}}{P_0} = \dfrac{%.0f}{%.2f} = %.2f~'%(P_n,P_0,eta*100)+'\\text{\%}'

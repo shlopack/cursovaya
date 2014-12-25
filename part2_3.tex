@@ -44,7 +44,7 @@
 Эта емкость устраняет протекание переменного тока по цепи R6 – R7 – земля и увеличивает коэффициент усиления каскада. Обеспечивает связь транзистора VT3 с нагрузкой R6 через оконечный каскад. \par
 \begin{equation}
 \label{eq:equation3_5}
- C_3 \geq \dfrac{5 \ldots 10}{2 \pi f_{\text{н}} (R_7 + R_{\text{н}})} geq \dfrac{5}{2 \pi 18 (52 + 52)} geq 654~\text{мкФ}
+ C_3 \geq \dfrac{5 \ldots 10}{2 \pi f_{\text{н}} (R_7 + R_{\text{н}})} \geq \dfrac{5}{2 \pi 18 (52 + 52)} \geq 654~\text{мкФ}
 \end{equation}
 
 \subsubsection{Параметры выбора транзистора VT3:}
@@ -57,6 +57,7 @@ P_{\text{к доп}} = (1.2 \ldots 1.5) P_{\text{к 3}} = (1.2 \ldots 1.5) \cdot
 \label{eq:equation3_7}
 I_{\text{к 3m}} = I_{\text{О КЗ}} + \dfrac{I_{\text{нм}}}{h_21} = 0.013 + \dfrac{2.54}{600} = 0.024~\text{А}
 \end{equation}
+
 \begin{equation}
 \label{eq:equation3_8}
 I_{\text{к доп}} = (1.2 \ldots 1.5) I_{\text{к 3m}} = 1.3 \cdot 52.265 = 0.024~\text{А}
@@ -70,4 +71,68 @@ U_{\text{кэ доп}} = (1.2 \ldots 1.5) E_{\text{0}} = 1.3 \cdot 52 = 0.024~\t
 \begin{equation}
 \label{eq:equation3_10}
 f_{h_{21}} = (2 \ldots 3) f_{\text{в}} = 2.5 \cdot 52555 = 85455~\text{кГц}
+\end{equation}
+
+Параметр h21 выбирается из максимально возможных по заданным параметрам.
+
+\begin{table}[htbp]
+\caption{Характеристики выбранного транзистора в ПОК}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+\hline 
+VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
+\hline 
+VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+\subsubsection{Расчет цепи смещения:}
+
+Схема цепи смещения на транзисторах представлена на рисунке 2.4. \par
+Находим ток делителя:
+\begin{equation}
+\label{eq:equation3_11}
+ I_{\text{д}} = (0.1 \ldots 0.3) I_{\text{0кз}} = 0.2 \cdot 0.02 = 0.04~\text{А}
+\end{equation}
+
+Выбор VTt практически определяется допустимым током
+\begin{equation}
+\label{eq:equation3_12}
+ I_{\text{к доп}} = (1.1 \ldots 1.3) I_{\text{к3max}} = 1.2 \cdot 0.024 = 0.029~\text{А}
+\end{equation}
+
+Определяем $R_{\text{бт}}$ ($U_{\text{бт}} \approx 0,5 - 0,6$ В)
+\begin{equation}
+\label{eq:equation3_13}
+ R_{\text{бт}} = U_{\text{бт}} / I_{\text{д}} = 0.5/0.029 = 17~\text{Ом}
+\end{equation}
+
+Сопротивление подстроечного резистора
+\begin{equation}
+\label{eq:equation3_14}
+ R_{\text{П}} = 2 (U_{\text{СМ}} - n U_{\text{Д}}) / I_{\text{0 КЗ}} = 2 (1.2 - 0.5) / 0.04 = 35~\text{Ом}
+\end{equation}
+
+\subsubsection{Входное сопротивление предоконечного каскада:}
+Рассчитаем $R_{\text{ВХ3}}$ и $r_{\text{Э3}}$
+\begin{equation}
+\label{eq:equation3_15}
+ R_{\text{ВХ3}} = h_{\text{11 VT3}} = (1 + h_{\text{21 VT3}}) \psi_T / I_{\text{0 Э3}} = (1 + 80) \cdot 25 / 40 = 51~\text{Ом}
+\end{equation}
+\begin{equation}
+\label{eq:equation3_16}
+ r_{\text{Э3}} = \psi_T / I_{\text{0 Э3}} = 25/40 = 0.625~\text{Ом}
+\end{equation}
+
+Что соответствует значению входного сопротивления в схеме с общим эмиттером, которое имеет небольшое значение и определяется сопротивлением прямо смещенного эмиттерного перехода, имеющем незначительную величину, в пересчете на малый входной ток базы.
+
+\subsubsection{Коэффициент усиления каскада по напряжению:}
+
+Предоконечный каскад имеет большое усиление по напряжению за счет того, что в коллекторной цепи включена динамическая нагрузка.
+\begin{equation}
+\label{eq:equation3_17}
+ K = R_{\text{КН3}} / r_{\text{э3}} = (R_{\text{ВХ4}} ( R_{\text{6Д}} + К_7)) / r_{\text{э3}} = (h_{21} R_{н}) / r_{\text{э3}} = (600 \cdot 2) / 0.625 = 1920
 \end{equation}
