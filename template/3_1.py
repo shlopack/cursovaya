@@ -1,0 +1,1 @@
+template = ' I_{\\text{O К3}} = \dfrac{2.5 \cdot %.2f }{ %.0f } = %.2f'%(I_nm,h_21,I_o_kz)

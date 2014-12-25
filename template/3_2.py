@@ -1,0 +1,1 @@
+template = 'R_{7} = (30\ldots 50)\cdot R_{н} = 40 \cdot %.0f = %.0f~\\text{Ом}'%(R_n,R7)
