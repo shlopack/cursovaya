@@ -18,3 +18,75 @@ R5, R4 и C1 – цепь обратной связи. По постоянном
 \end{equation}
 
 \subsubsection{Параметры выбора транзисторов:}
+\begin{equation}
+\label{eq:equation4_1}
+ I_{\text{ К1}} = (1.1 \ldots 1.3) I_{\text{{0 К1}} = 1.1 \cdot 0.021 = 2.5~\text{мА} }
+\end{equation}
+\begin{equation}
+\label{eq:equation4_2}
+f_{\text {h21}}=(5\idots 10)f_{\text{{R}}}=8*12000=99~\text{кГЦ}
+\end{equation}
+
+тут типо таблица ,но я их не умею делать априори
+\subsubsection{Выбор сопротивления R_{\text{2}}:}
+\begin{equation}
+\label{eq:equation4_3}
+R_{\text {2}}=U_{\text{БЭ3}/(I_{\text{0K1}}-I_{\text{0БЗ}})=(0.6 \idolts 0.7)/(0.0021-0.02/80)=390~\text{Ом}}
+\end{equation}
+\subsection {Выбор сопротивления R_{\text{3}}:}
+\begin{equation}
+\label{eq:equation4_4}
+R_{\text {3}}=()E_{\text{0}-(U_{\text{БЭ}}\dfrac 2 \cdot I_{\text{0Э1}})=(E_\text{0}}-U_{\text {БЭ1}}) \dfrac 2 \cdot(I_\text{0K1}}+I_\text{0K1}} \defrac h_{\text {21}})==(15-0.7)\defrac 2 \cdot(0.0021+0.0021 \defrac 50) =3.3~\text{кОм}
+\end{equation}
+\subsection {Цепь обратной связи :}
+
+По обратной связи сигнал с выхода усилителя (точка соединения RH) подается на переход БЭ первого транзистора. При этом следует учитывать, что внутреннее сопротивление дифференциального каскада равно 2h11. Передача сигнала по ООС будет производиться по цепи обратной связи R5, R4 и C1.
+
+
+\begin{equation}
+\label{eq:equation4_5}
+β = [R_{\text {ЭКВ}}\defrac(R_\text {{5}}+R_\text {{ЭКВ}})]\cdot[r_\text{{БЭ1}}\defrac R] =155\defrac(5000+280)\cdot(600/3125) = 0.0056
+\end{equation}
+\begin{equation}
+\label{eq:equation4_6}
+R = 2\cdot h_{\text{{11}} + R_{\text {{ЭГ}} = 2 \cdot h_{text{{11}} + R_{\text{{1}}\cdot R_{{\text{{Г}}\defrac(R_{\text{1}} + R_{\text Г}}) = 
+=2 \cdot h_{\text{11}} + R_{\text{{ЭГ}} = 2\cdot625 + 1875 = 3125~\text ~ {Ом} }
+\end{equation}
+
+Сопротивление RЭГ является сопротивлением между базой транзистора VT1-VT2 и землей по переменному току. При расчете RЭГ необходимо руководствоваться следующими соображениями:
+
+R_{\text{{ЭГ}}}=R_{\text{{1}} \cdot R_{{\text{{Г}}}} \defrac(R_1{{\text{{1}}}})=5000 \cdot 3000 \defrac=1875~{Ом}
+\end			
+При этом RГ – выходное сопротивление каскада предварительного усиления, выполненного по схеме эмиттерного повторителя. Входное сопротивление этого усилителя имеет большую величину, выходное относительно малую порядка сотен Ом и зависит от сопротивления выходного регулятора тембра, который имеет большое входное сопротивление, порядка тысяч Ом.
+Для того чтобы сопротивление R1, включенное параллельно RГ, существенно не влияло на сопротивление генератора, примем его равным порядка кила Ом:
+\begin
+\label{eq:equation4_7}
+R_{\text{{1 }}= 5~ {кОм} и R_{\text_{{Г}} = 3000 ~{Ом} 
+\end
+\begin
+\label{eq:equation4_7}
+\end
+\begin
+\label{eq:equation4_8}
+h_{\text{{11}}=(1+h_{\text{21}) \cdot ψ_{\text{{Т}} \defrac I_{\text{0}} Э_{\text{1}} =(1+50)\cdot 0.025 \defrac 0.002 =625~ {Ом}
+\end
+\begin
+\label{eq:equation4_9}
+R_{\text {ЭКВ}}=()R{\text{4}} \cdot R \defrac R_4{\text{4}}+R)=306 \cdot 3125 \defrac (3125+306)=208~(Ом)
+\end
+Для сохранения идентичности режимов VT1 и VT2 сопротивление R1 выбирается равным R5. R5 выбираем из ряда:
+\begin
+\label{eq:equation4_10}
+R_{\text{5}}=(20 \idots 100) \cdot R_{\text{Н}}=100 \cdot 2 200~{Ом}
+\end
+\begin
+\label{eq:equation4_11}
+R_{\text{5}}=5000~{Ом}}
+\end
+R_{\text{4}}=[(F-1) \cdot R \cdot R_{\text{5}}]\defrac [h_{\text{21}}\cdot R_{\text{КН1} \cdot K_{\text{ПОК}}-(F-1)(R+R_{\text{5}})]=24 \cdot 3125\cdot 5000 \defrac(50 \cdot 45 \cdot 631-24 cdot 8125)=306
+
+
+
+
+
+
