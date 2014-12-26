@@ -36,7 +36,7 @@ R_{\text {2}}=U_{\text{БЭ3}/(I_{\text{0K1}}-I_{\text{0БЗ}})=(0.6 \idolts 0.7
 \subsection {Выбор сопротивления R_{\text{3}}:}
 \begin{equation}
 \label{eq:equation4_4}
-R_{\text {3}}=()E_{\text{0}-(U_{\text{БЭ}}\dfrac 2 \cdot I_{\text{0Э1}})=(E_\text{0}}-U_{\text {БЭ1}}) \dfrac 2 \cdot(I_\text{0K1}}+I_\text{0K1}} \defrac h_{\text {21}})==(15-0.7)\defrac 2 \cdot(0.0021+0.0021 \defrac 50) =3.3~\text{кОм}
+R_{\text {3}}=\dfrac{E_{\text{0}-(U_{\text{БЭ}} {2 \cdot I_{\text{0Э1}})}=(E_\text{0}}-{U_{\text {БЭ1}}) / 2 \cdot(I_\text{0K1}}+I_\text{0K1}}  h_{\text {21}})==(15-0.7) 2 \cdot(0.0021+0.0021 \dfrac 50) =3.3~\text{кОм}
 \end{equation}
 \subsection {Цепь обратной связи :}
 
@@ -45,49 +45,115 @@ R_{\text {3}}=()E_{\text{0}-(U_{\text{БЭ}}\dfrac 2 \cdot I_{\text{0Э1}})=(E_\
 
 \begin{equation}
 \label{eq:equation4_5}
-β = [R_{\text {ЭКВ}}\defrac(R_\text {{5}}+R_\text {{ЭКВ}})]\cdot[r_\text{{БЭ1}}\defrac R] =155\defrac(5000+280)\cdot(600/3125) = 0.0056
+β = [R_{\text {ЭКВ}}\dfrac(R_\text {{5}}+R_\text {{ЭКВ}})]\cdot[r_\text{{БЭ1}} / R] =155/(5000+280)\cdot(600/3125) = 0.0056
 \end{equation}
 
 \begin{equation}
 \label{eq:equation4_6}
-R = 2\cdot h_{\text{11}} + R_{\text{ЭГ}} = 2 \cdot h_{text{11}} + R_{\text{1}}\cdot R_{{\text{Г}} \defrac{ R_{\text{1}} + R_{\text Г}} }{ } = 
+R = 2\cdot h_{\text{11}} + R_{\text{ЭГ}} = 2 \cdot h_{text{11}} + R_{\text{1}}\cdot R_{{\text{Г}} \dfrac{ R_{\text{1}} + R_{\text Г}} }{ } = 
 =2 \cdot h_{\text{11}} + R_{\text{ЭГ}} = 2\cdot625 + 1875 = 3125~\text{Ом}
 \end{equation}
 
 Сопротивление RЭГ является сопротивлением между базой транзистора VT1-VT2 и землей по переменному току. При расчете RЭГ необходимо руководствоваться следующими соображениями:
+\begin{equation}
+\label{eq:equation4_7}
+R_{\text{ЭГ}}=\dfrac{R_{\text{1}} \cdot R_{\text{Г}}{R_\text{1}}+R_{\text{Г}}}
 
-R_{\text{{ЭГ}}}=R_{\text{{1}} \cdot R_{{\text{{Г}}}} \defrac(R_1{{\text{{1}}}})=5000 \cdot 3000 \defrac=1875~{Ом}
-\end			
+\end{equation}
 При этом RГ – выходное сопротивление каскада предварительного усиления, выполненного по схеме эмиттерного повторителя. Входное сопротивление этого усилителя имеет большую величину, выходное относительно малую порядка сотен Ом и зависит от сопротивления выходного регулятора тембра, который имеет большое входное сопротивление, порядка тысяч Ом.
 Для того чтобы сопротивление R1, включенное параллельно RГ, существенно не влияло на сопротивление генератора, примем его равным порядка кила Ом:
-\begin
-\label{eq:equation4_7}
-R_{\text{{1 }}= 5~ {кОм} и R_{\text_{{Г}} = 3000 ~{Ом} 
-\end
-\begin
-\label{eq:equation4_7}
-\end
-\begin
+
+\begin{equation}
 \label{eq:equation4_8}
-h_{\text{{11}}=(1+h_{\text{21}) \cdot ψ_{\text{{Т}} \defrac I_{\text{0}} Э_{\text{1}} =(1+50)\cdot 0.025 \defrac 0.002 =625~ {Ом}
-\end
-\begin
+R_{\text{{1 }}= 5~ {кОм} и R_{\text_{{Г}} = 3000 ~{Ом} 
+\end{equation}
+\begin{equation}
 \label{eq:equation4_9}
-R_{\text {ЭКВ}}=()R{\text{4}} \cdot R \defrac R_4{\text{4}}+R)=306 \cdot 3125 \defrac (3125+306)=208~(Ом)
-\end
-Для сохранения идентичности режимов VT1 и VT2 сопротивление R1 выбирается равным R5. R5 выбираем из ряда:
-\begin
+\end{equation}
+\begin{equation}
 \label{eq:equation4_10}
-R_{\text{5}}=(20 \idots 100) \cdot R_{\text{Н}}=100 \cdot 2 200~{Ом}
-\end
-\begin
+h_{\text{{11}}=(1+h_{\text{21}) \cdot \psi_{\text{{Т}} \defrac I_{\text{0}} Э_{\text{1}} =(1+50)\cdot 0.025 \defrac 0.002 =625~ {Ом}
+\end{equation}
+\begin{equation}
 \label{eq:equation4_11}
+R_{\text {ЭКВ}}=()R{\text{4}} \cdot R / R_4{\text{4}}+R)=306 \cdot 3125 / (3125+306)=208~(Ом)
+\end{equation}
+Для сохранения идентичности режимов VT1 и VT2 сопротивление R1 выбирается равным R5. R5 выбираем из ряда:
+\begin{equation}
+\label{eq:equation4_12}
+R_{\text{5}}=(20 \idots 100) \cdot R_{\text{Н}}=100 \cdot 2 200~{Ом}
+\end{equation}
+\begin{equation}
+\label{eq:equation4_13}
 R_{\text{5}}=5000~{Ом}}
-\end
-R_{\text{4}}=[(F-1) \cdot R \cdot R_{\text{5}}]\defrac [h_{\text{21}}\cdot R_{\text{КН1} \cdot K_{\text{ПОК}}-(F-1)(R+R_{\text{5}})]=24 \cdot 3125\cdot 5000 \defrac(50 \cdot 45 \cdot 631-24 cdot 8125)=306
+\end{equation}
+\begin{equation}
+\label{eq:equation4_14}
+\R_{\text{4}}=\dfrac{[(F-1)] \cdot R \cdot R_{\text{5}}]}{h_{\text{21}}} \cdot R_{\text{КН1}} \cdot K_{\text{ПОК}}-(F-1)\cdot (R+R_{\text{5}})]}=24 \cdot 3125 \cdot 5000 / (50 \cdot 631-24 \cdot 8125)=306~Ом
 
 
+\end{equation}
+\begin{equation}
+\label{eq:equation4_15}
+R_{\text{КН1 }}=\dfrac {R_{\text{2}} \cdot R_{\text{ВХ3}} {(R_{\text{2}}}+R_{\text{ВХ3}}}=390 \cdot 51/ (390+51)=45~{Ом}
+\end{equation}
+
+Отношение R4  к R5 характеризует ООС по переменному току. За счет сопротивления R4 по переменному току обратная связь не 100\%, но за счет малости R4 имеет величину порядка 95\%.
+Значение F выбирается из предварительного расчета: F = 25
+Коэффициент петлевого усиления:
+
+\begin{equation}
+\label{eq:equation4_16}
+K_{\text{П}}=\beta \cdot K_{\text{ПОК}} \cdot K_{\text{OK}}=0.0056 \cdot 3.8 \cdot 631 \cdot 1 =13
+
+\end{equation}
+
+\begin{equation}
+\label{eq:equation4_17}
+K_{\text{ВК}}=S_{\text{1}} \cdot R_{\text{КН1}}=\dfrac{R_{\text{КН1}}}{r_{\text{Э}}}=45 \cdot 0.0021/0.0025=3.8
+
+\end{equation}
+\begin{equation}
+\label{eq:equation4_18}
+K_{\text{ОК}}=1
+\end{equation}
+Входное сопротивление усилителя:
+\begin{equation}
+\label{eq:equation4_18}
+R_{\text{ВХВК}}=\dfrac{R_{\text{1}} \cdot (2 \cdot h_{\text{11}}+R_{\text{4}} \cdot F}{[R_{\text{1}}+2 \cdot h_{\text{11}}+R_{\text{4}} \cdot F]}=5000 \cdot(2 \cdot 625+306) \cdot 25 / (5000+(2 \cdot+306) \cdot 25)=4600~Ом
+\end{equation}
+Конденсатор C2 служит для устранения возможности самовозбуждения на высоких частотах:
+
+\begin{equation}
+\label{eq:equation4_19}
+С_{\text{2}}=\dfrac{(R_{\text{2}}+R_{\text{ВХ3}})}{2 \cdot \pi f{\text{П}} K_{\text{ПОК}} \cdot R_{\text{2}} \cdot R_{ВХ3} })=(390+51)
+/(2 \cdot 12000 \cdot 3.14 \cdot 631 \cdot 51 \cdot 390)=42~пФ 
 
 
+\end{equation}
+\subsubsection{	Выбор емкости C1:}
+Эта емкость устраняет 100\% обратную связь по переменному току.
+\begin{equation}
+\label{eq:equation4_19}
+С_{\text{1}}=1 \dfrac{[]2 \cdot \pi\cdot f_{\text{Н}}\cdot R_{\text{4}}\cdot \sqrt{M^2-1}]}=1/[2 \cdot 3.14 \cdot 60 \cdot 306 \cdot \sqrt{1.42^2-1]}=8.6~{мкФ}
+\end{equation}
+\subsubsection{	Коэффициент требуемого усиления по напряжению рассчитанного усилителя мощности:}
+
+\begin{equation}
+\label{eq:equation4_}
+K_{\text{УМ}}=\dfrac{1}{\beta}=1/0.0056=178.5
 
 
+\end{equation}
+
+Также усиление по напряжению каскада усиления мощности можно определить через глубину обратной связи:
+
+\begin{equation}
+\label{eq:equation4_19}
+K_{\text{УМ}}=\dfrac {K_{\text{Е}}}{K_{\text{УМ}}}=3.46/171=0.02~В
+
+
+\end{equation}
+
+Сопротивление дифференциального каскада ограничивается сопротивлениями базового делителя R1 и сопротивление источника сигнала, каковым для него является КПУ 2, выполненный по схеме с ОК, выходное сопротивление которого имеет небольшую величину.
+\subsubsection{	Итоговые данные предоконечного каскада:	}
