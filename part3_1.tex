@@ -11,10 +11,14 @@
 
 \subsubsection{Коэффициент коррекции:} % (fold)
 
-  \begin{equation}
-    \label{eq:equation5_1}
-      m = 10^{ \dfrac{\Delta b T_{max}}{20}} = 10^{\dfrac{8}{20}} = 2.5
-   \end{equation} 
+ \begin{equation}
+  \label{eq:equation5_1}
+  m \geq 10^{ \left| \Delta b_{\text{т}}  
+   \right| /20 }
+\end{equation}
+\begin{equation*}
+  \input{formulas/1_3}
+\end{equation*}
 
 % subsubsection коэффициент_коррекции_ (end)
 
@@ -32,7 +36,13 @@
 
   \begin{equation}
     \label{eq:equation5_3}
-      2 m f_{\text{н}} < f_0 < \dfrac{f_{\text{в}}}{2m} 
-   \end{equation} 
+      2 m f_{\text{н}} \leq f_0 \leq \dfrac{f_{\text{в}}}{2m} 
+ \end{equation} 
+ \begin{equation}
+   \label{eq:equation5_4}
+     400 \leq f_0 \leq 2800
+  \end{equation} 
+
+    Т.о. видно, что не происходит взаимного влияния низкочастотного и высокочастотного регулятора.
 
 % subsubsection subsubsection_name (end)

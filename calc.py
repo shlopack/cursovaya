@@ -46,7 +46,7 @@ for name in names:
 	write_formula(name, template)
 
 
-#2
+#2_2
 
 U_nm = math.sqrt(2*P_n*R_n)
 I_nm = U_nm/R_n
@@ -83,7 +83,7 @@ R10 = R9
 
 C_pn = 1/(2*math.pi*f_l*R_n*math.sqrt(1.42*1.42-1))*1000
 
-#3
+#2_3
 
 I_o_kz = (2.5*I_nm)/h_21
 R7 = 40*R_n
@@ -96,9 +96,15 @@ I_k3d = 1.3*I_k3m
 U_ke_3d = 1.3*E_0
 f3_h_21 = 2.5*f_h/1000
 
+#formula 3_17
 K = (h_21*R_n)/0.625
 
-print(K)
+
+#2_4
+
+R_vhvk = 4600
+U_vhvk = 0.02
+
 
 names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8', 
 '2_9', '2_10', '2_11', '2_14', '2_15', '2_16', '2_17', '2_18',  '2_19', '2_20', '2_21', '2_22']
@@ -107,7 +113,6 @@ for name in names:
 	command = command.decode('utf8')
 	exec(command)
 	write_formula(name, template)
-
 
 export = [
 	['f_h_21', fh_21, '%.2f'],
@@ -126,4 +131,47 @@ for var in export:
 	open('formulas/{0}.tex'.format(var[0]),'wb').write((var[2]%(var[1])).encode('utf-8'))
 
 
+	#3_1
+#formula 5_2
+f0 = math.sqrt(f_l*f_h)
+f0_ = f_h/(2*m)
+_f0 = 2*m*f_l
+
+R2 = 0.5 * R_vhvk
+R5 = R2
+R1 = R2 / m
+R3 = R1 / m
+R4 = 0.1 * R2
+C1 = 1 / (2 * math.pi * f_l * m * R2)
+C2 = m * C1
+C3 = (m*m) / (4 * math.pi * f_h * R2)
+C4 = m * C3
+R_vht = R1 + R3
+R_viht = R4 + (R1*R3)/(R1+R3)
+R__ = (R2*m)/(m*m - 1)
+R_ = R2 - R__
+
+K_sr = R3 / (R1+R3)
+
+U_vh_t = U_vhvk / K_sr
+
+
+#3_2
+U_n = U_vhvk
+R_n = R_vhvk
+
+
+U_nm = U_n * math.sqrt(2)
+I_nm = U_nm / R_n
+
+I_ok = 10*I_nm
+U_ke = U_n + 2
+E_0p = 3*U_ke
+E_0 = 1.2 * E_0p
+R_e = 0.3 * E_0p / I_ok
+R3 = (E_0p - U_ke - 3.6) / I_ok
+
+I_km = U_n / (R3 * R_n)
+
+print(I_km)
 print('all right')      
