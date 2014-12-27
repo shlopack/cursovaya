@@ -1,0 +1,1 @@
+template = 'R_{\\text{ВХ Т}}=89 + (1+%.0f) \cdot %.0f =%.0f~\\text{кОм}'%(h21,R_en,R_vht)

@@ -1,0 +1,1 @@
+template = ' r_{\\text{Э}}=\dfrac{\psi}{I_0}=25/%.1f=%.0f'%(I_0,r_e)

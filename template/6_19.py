@@ -1,0 +1,1 @@
+template = 'K=\dfrac{1+h_21 \cdot R_{\\text{ЭН}}}{(1+h_21)\cdot R_{\\text{ЭН}}+h_11}=\dfrac{R_{\\text{ЭН}}}{R_{\\text{ЭН}}+{r_{\\text{Э}}}}=%.0f/(%.0f+%.0f)=%.4f \\approx 1'%(R_en,R_en,r_e,K)

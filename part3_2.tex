@@ -97,7 +97,7 @@
 
   \begin{equation}
   \label{eq:equation6_13}
-    I_{\text{К доп}} \geq (1.1 \ldots 1.3)(I_{\text{0К}} + I_{\text{Кm}}) = 1.3 \cdot (0.5 \cdot 10^{-3} + 0.013 \cdot 10^{-3}) = 0.66~\text{мА}; 
+    I_{\text{К доп}} \geq (1.1 \ldots 1.3)(I_{\text{0К}} + I_{\text{Кm}}) = 1.3 \cdot (0.5 \cdot 10^{-3} + 0.0078 \cdot 10^{-3}) = 0.66~\text{мА}; 
   \end{equation} 
 
   \begin{equation}
@@ -130,7 +130,7 @@ h_{21}=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
 ток делителя:
  \begin{equation}
    \label{eq:equation6_16}
- I_{\text{Д}}=(5 \ldots 10) \cdot I_{\text{Бm}}=\dfrac{(5 \ldots 10) \cdot I{\text{Кm}}}{h_21}=10 \cdot 7 \cdot 8\cdot 10^-6 /89=0.87~\text{мкА}
+ I_{\text{Д}}=(5 \ldots 10) \cdot I_{\text{Бm}}=\dfrac{(5 \ldots 10) \cdot I{\text{Кm}}}{h_21}=10 \cdot 7.8\cdot 10^-6 /89=0.87~\text{мкА}
  \end{equation}
 
  определение сопротивлений базового делителя:
@@ -143,30 +143,30 @@ h_{21}=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
    \end{equation*}
 
  \begin{equation}
-   \label{eq:equation6_17}
+   \label{eq:equation6_18}
    R_2=\dfrac{U_{\text{БЭ}}+U_{\text{Э}}}{I_{\text{Д}}}=(0.7+3.6)/0.87 \cdot 10^-6=5~\text{МОм}
  \end{equation}
 \subsubsection{Коэффициент усиления эмиттерного повторителя стремится к 1:}
 \begin{equation}
-   \label{eq:equation6_18}
+   \label{eq:equation6_19}
 K=\dfrac{1+h_21 \cdot R_{\text{ЭН}}}{(1+h_21)\cdot R_{\text{ЭН}}+h_11}=\dfrac{R_{\text{ЭН}}}{R_{\text{ЭН}}+{r_{\text{Э}}}}=2800/(2800+50)=0.0980 \approx 1
 \end{equation}
 \begin{equation}
-   \label{eq:equation6_19}
+   \label{eq:equation6_20}
    r_{\text{Э}}=\dfrac{\psi}{I_0}=25/0.5=50
 \end{equation}
 \subsubsection{Номинальное входное напряжение:}
 \begin{equation}
-   \label{eq:equation6_20}
+   \label{eq:equation6_21}
 U_{\text{ВХ}}=\dfrac {U_{\text{Н}}}{K}=16 \cdot 10^{-3} /0.98= 16.3~\text {мВ}
 \end{equation}
 \subsubsection{Входное сопротивление каскада:}
 \begin{equation}
-   \label{eq:equation6_21}
+   \label{eq:equation6_22}
 R_{\text{ВХ}}=\dfrac{1}{\dfrac{1}{R_\text{ВХ Т}}+\dfrac{1}{R_1}+\dfrac{1}{R_2}}=1/(1/256 \cdot 10^3 +1/1.2 \cdot 10^6 + 1/5 \cdot 10^6)=0.2\text{МОм}
 \end{equation}
 \begin{equation}
-   \label{eq:equation6_22}
+   \label{eq:equation6_23}
 R_{\text{ВХ Т}}=h_{11}+(1+h_{21})\cdot R_{\text{ЭН}}=h_{21} \cdot h_{\text{Э}}+(1+h_{21}) \cdot R_{\text{ЭН}}=h_{11}+(1+h_{21}) \cdot R_{\text{ЭН}}
 \end{equation}
 \begin{equation*}

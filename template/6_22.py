@@ -1,0 +1,1 @@
+template = 'R_{\\text{ВХ}}=\dfrac{1}{\dfrac{1}{R_\\text{ВХ Т}}+\dfrac{1}{R_1}+\dfrac{1}{R_2}}=1/(1/%.0f +1/%.1f+ 1/%.0f)=%.1f\\text{МОм}'%(R_vht,R1,R2,R_vh)

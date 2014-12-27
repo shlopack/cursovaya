@@ -1,0 +1,1 @@
+template = 'I_{\\text{Д}}=(5 \ldots 10) \cdot I_{\\text{Бm}}=\dfrac{(5 \ldots 10) \cdot I{\\text{Кm}}}{h_21}=10 \cdot %.1f /%.0f=%.2f~\\text{мкА}'%(I_km,h21,I_d)
