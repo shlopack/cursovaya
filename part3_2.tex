@@ -25,7 +25,9 @@
     I_{\text{ок}} \geq (5 \ldots 10) \cdot I_{\text{нм}} = 10 \cdot 9.5 \cdot 10^{-6} = 95~\text{мкА}.
   \end{equation} 
 
-  Который не удовлетворяет условию тока, необходимому для раскачки УМ: $I_{\text{ок}} = 0.5 \ldots 2$мА. Выбираем ток покоя $I_{\text{ок}} = 0.5$ мА.
+  Который не удовлетворяет условию тока, необходимому для раскачки УМ: $I_{\text{ок}} = 0.5 \ldots 2$мА. 
+  Выбираем ток покоя $$I_{\text{ок}}$$ = 0.5 мА.
+
 
   \subsubsection{Напряжение коллектор-эмиттер транзистора:}  
 
@@ -123,25 +125,31 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
    \label{eq:equation6_15}
 h_21=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
 \end{equation} 
+
  \subsubsection{Расчет базвой цепи:}
- а) ток делителя:
+ток делителя:
  \begin{equation}
    \label{eq:equation6_16}
  I_{\text{Д}}=(5 \ldots 10) \cdot I_{\text{Бm}}=\dfrac{(5 \ldots 10) \cdot I{\text{Кm}}}{h_21}=10 \cdot 7 \cdot 8\cdot 10^-6 /89=0.87~\text{мкА}
  \end{equation}
- б) определение сопротивлений базового делителя:
+
+ определение сопротивлений базового делителя:
  \begin{equation}
    \label{eq:equation6_17}
-   R_1=\dfrac{E_0-U{\text{Э}}-U{\text{БЭ}}}{I{\text{ОБ}}+I{\text{Д}}}=\dfrac{E_0-U{\text{Э}}-U{\text{БЭ}}}{\dfrac{I{\text{ОК}}}}{h_21+I{\text{Д}}}=(12.3-3.6-0.7)/(0.5 \cdot 10^-3/89+0.87 \cdot 10^-6)=1.2~\text{МОм}
+   R_1=\dfrac{E_0-U{\text{Э}}-U{\text{БЭ}}}{I{\text{ОБ}}+I{\text{Д}}}=\dfrac{E_0-U_{\text{Э}}-U{\text{БЭ}}}{ \dfrac{I{\text{ОК}}}{ {h_21}}+I{\text{Д}} }
    \end{equation}
-   \begin{equation}
+   \begin{equation*}
+   R_1=(12.3-3.6-0.7)/(0.5 \cdot 10^-3/89+0.87 \cdot 10^-6)=1.2~\text{МОм}
+   \end{equation*}
+
+ \begin{equation}
    \label{eq:equation6_17}
-   R2=dfrac{U_{\text{БЭ}}+U_{\text{Э}}}{I_{\text{Д}}}=(0.7+3.6)/0.87 \cdot 10^-6=5~\text{МОм}
-\end{equation}
+   R_2=\dfrac{U_{\text{БЭ}}+U_{\text{Э}}}{I_{\text{Д}}}=(0.7+3.6)/0.87 \cdot 10^-6=5~\text{МОм}
+ \end{equation}
 \subsubsection{Коэффициент усиления эмиттерного повторителя стремится к 1:}
 \begin{equation}
    \label{eq:equation6_18}
-K=\dfrac{1+h_21 \cdot R_{\text{ЭН}}}{(1+h_21)\cdot R_{\text{ЭН}}+h_11}=\dfrac{R_{\text{ЭН}}}{R_{\text{ЭН}}+{r_{\text{Э}}}}=2800/(2800+50)=0.0980 →1
+K=\dfrac{1+h_21 \cdot R_{\text{ЭН}}}{(1+h_21)\cdot R_{\text{ЭН}}+h_11}=\dfrac{R_{\text{ЭН}}}{R_{\text{ЭН}}+{r_{\text{Э}}}}=2800/(2800+50)=0.0980 \approx 1
 \end{equation}
 \begin{equation}
    \label{eq:equation6_19}
@@ -159,19 +167,12 @@ R_{\text{ВХ}}=\dfrac{1}{\dfrac{1}{R_{ВХ Т}+\dfrac{1}{R_1}+\dfrac{1}{R_2}}}=
 \end{equation}
 \begin{equation}
    \label{eq:equation6_22}
-R_{\text{ВХ Т}}=h_11+\dfrac(1+h_21)\cdot R_{\text{ЭН}}=h_21 \cdot h_{\text{Э}}+(1+h_21) \cdot R_{\text{ЭН}}=h_11+(1+h_21) \cdot R_{\text{ЭН}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
+R_{\text{ВХ Т}}=h_11+\dfrac(1+h_21)\cdot R_{\text{ЭН}}=h_21 \cdot h_{\text{Э}}+(1+h_21) \cdot R_{\text{ЭН}}=h_11+(1+h_21) \cdot R_{\text{ЭН}}
 \end{equation}
+\begin{equation*}
+R_{\text{ВХ Т}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
+\end{equation*}
 \subsubsection{Итоговые данные второго каскада предварительного усиления:}
 табличка
 табличка
 
-
-
-
-бля кароч я сюда кину этот раздел сам скопируешь потому.что новый создавать нет сил разбираться
-\subsection{Расчет регулятора усиления}
-
-     Для уменьшения влияния регулятора усиления на регулятор тембра его отделяют от РТ каскадом КПУ 1. Это объясняется тем, что регулятор тембра имеет большое выходное напряжения. Регулятор тембра же требует малого выходного сопротивления каскада, поставленного перед ним.
-     RВЫХ.ПРЕД = 5 кОм  и   RВХ.СЛЕД = 88.5 кОм  
-     R_{\text{У}}=\sqrt{R_{\text{вых.пред}}\cdot {R_{\text{вх.след}}}Ъ=\sqrt{R{\text{Г}}\cdot R{\text{кпу1.1}}}}=\sqrt{8850 \cdot 5000}=21~\text{кОм}
-     схемка все такое

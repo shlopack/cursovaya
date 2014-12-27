@@ -1,1 +1,1 @@
-template = 'R_{\\text {3}}=\dfrac{E_{\\text{0}-(U_{\\text{БЭ}} {2 \cdot I_{\\text{0Э1}})}=(E_\\text{0}}-{U_{\\text {БЭ1}}) / 2 \cdot(I_\\text{0K1}}+I_\\text{0K1}}  h_{\\text {21}})==(%.0f-0.7) 2 \cdot(%.4f+%.4f \dfrac %.0f) =%.1f~\\text{кОм}'%(E_0,I_0k1,h_21_1,R3)
+template = 'R_3=\dfrac{%.0f-0.7}{ 2 \cdot(%.4f + %.4f / %.0f)} = %.2f~\\text{кОм}'%(E_0,I_0k1,I_0k1,h_21_1,R3)

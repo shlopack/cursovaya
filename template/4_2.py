@@ -1,1 +1,1 @@
-template = 'f_{\\text {h21}}=(5\ldots 10)f_{\\text{{R}}}=8*%.0f=%.0f~\\text{кГЦ}'%(f_h,fh_21_)
+template = 'f_{\\text {h21}}=(5\ldots 10) f_{\\text{в}}=8 \cdot %.0f=%.0f~\\text{кГЦ}'%(f_h,fh_21_)

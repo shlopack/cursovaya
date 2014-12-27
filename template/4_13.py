@@ -1,1 +1,1 @@
-template = '\R_{\\text{4}}=\dfrac{(F-1) \cdot R \cdot R_{\\text{5}}}{h_{\\text{21}} \cdot R_{\\text{КН1}} \cdot K_{\\text{ПОК}}-(F-1)\cdot (R+R_{\\text{5}})}=%.0f \cdot %.0f \cdot %.0f / (50 \cdot %.0f-%.0f \cdot %.0f)=%.0f~\\text{Ом}'%(F,R,R5,h_21_1,K_pok,R4)
+template = 'R_4 = %.0f \cdot %.0f \cdot %.0f / (%.0f \cdot %.0f \cdot %.0f -%.0f \cdot %.0f)=%.0f~\\text{Ом}'%(F-1,R,R5,h_21_1,R_kn1,K_pok, F-1, R+R5, R4)

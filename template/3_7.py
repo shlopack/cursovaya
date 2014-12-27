@@ -1,1 +1,1 @@
-template = 'I_{\\\text{к 3m}} = I_{\\\text{О КЗ}} + \dfrac{I_{\\\text{нм}}}{h_21} = 0.013 + \dfrac{%.2f}{%.0f} = %.3f~\\\text{А}'%(I_nm,h_21,I_k3m)
+template = 'I_{\\text{к 3m}} = I_{\\text{О КЗ}} + \dfrac{I_{\\text{нм}}}{h_21} = 0.013 + \dfrac{%.2f}{%.0f} = %.3f~\\text{А}'%(I_nm,h_21,I_k3m)

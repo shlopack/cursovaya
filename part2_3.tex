@@ -14,27 +14,27 @@
  I_{\text{O К3}} = (2\ldots 3)\cdot I_{\text{Б m4}}  = (2\ldots 3)\cdot I_{\text{нм}}/h_{\text{21 экв}}
 \end{equation}
 \begin{equation*}
- I_{\text{O К3}} = \dfrac{2.5 \cdot 53.25 }{ 254 } = 55.55
+ \input{formulas/3_1}
 \end{equation*}
  
  \subsubsection{Выбор резистора R7:} 
  
 \begin{equation}
 \label{eq:equation3_2}
- R_{7} = (30\ldots 50)\cdot R_{н} = 40 \cdot 4 = 100~\text{Ом}
+\input{formulas/3_2}
 \end{equation}
 Резистор R7 включается в цепь для того, чтобы не закорачивать источник питания конденсатором С3, обеспечивающим включение в выходную цепь транзистора динамической нагрузки R6. Основное усиление напряжения происходит за счет динамической нагрузки R6, потому резистор R7 выбирается малой величины.
 
 \subsubsection{Выбор резистора R6:} 
 \begin{equation}
 \label{eq:equation3_3}
- R_{6} = (E_{0}– U_{\text{БЭ5}} – I_{\text{О К3}} \cdot R_7)/I_{\text{0 К3}} = (15 – 0.6 – 0.023 \cdot 100)/0.02 = 100~\text{Ом}
+ \input{formulas/3_3}
 \end{equation}
 
 При прохождении сигнала динамическое сопротивление R6 будет определяться:
 \begin{equation}
 \label{eq:equation3_4}
- R_{\text{6Д}} = \dfrac{R_6}{1-K_{\text{ОК}}} = 10 \cdot 542.212 = 100~\text{Ом}
+ \input{formulas/3_4}
 \end{equation}
 
 Коэффициент усиления оконечного каскада $K_{\text{ОК}}$, т.к. он является повторителем напряжения, близок к 1 и составляет более 0.9: $K_{\text{ОК}}$ = 0.9. \par
@@ -44,33 +44,33 @@
 Эта емкость устраняет протекание переменного тока по цепи R6 – R7 – земля и увеличивает коэффициент усиления каскада. Обеспечивает связь транзистора VT3 с нагрузкой R6 через оконечный каскад. \par
 \begin{equation}
 \label{eq:equation3_5}
- C_3 \geq \dfrac{5 \ldots 10}{2 \pi f_{\text{н}} (R_7 + R_{\text{н}})} \geq \dfrac{5}{2 \pi 18 (52 + 52)} \geq 654~\text{мкФ}
+ \input{formulas/3_5}
 \end{equation}
 
 \subsubsection{Параметры выбора транзистора VT3:}
 \begin{equation}
 \label{eq:equation3_6}
-P_{\text{к доп}} = (1.2 \ldots 1.5) P_{\text{к 3}} = (1.2 \ldots 1.5) \cdot \dfrac{E_0 I_{\text{0 кз}}}{2} = 1.3 \cdot \dfrac{16 0.02}{2} = 0.025~\text{Вт}
+\input{formulas/3_6}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation3_7}
-I_{\text{к 3m}} = I_{\text{О КЗ}} + \dfrac{I_{\text{нм}}}{h_21} = 0.013 + \dfrac{2.54}{600} = 0.024~\text{А}
+\input{formulas/3_7}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation3_8}
-I_{\text{к доп}} = (1.2 \ldots 1.5) I_{\text{к 3m}} = 1.3 \cdot 52.265 = 0.024~\text{А}
+\input{formulas/3_8}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation3_9}
-U_{\text{кэ доп}} = (1.2 \ldots 1.5) E_{\text{0}} = 1.3 \cdot 52 = 0.024~\text{В}
+\input{formulas/3_9}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation3_10}
-f_{h_{21}} = (2 \ldots 3) f_{\text{в}} = 2.5 \cdot 52555 = 85455~\text{кГц}
+\input{formulas/3_10}
 \end{equation}
 
 Параметр h21 выбирается из максимально возможных по заданным параметрам.
@@ -134,8 +134,11 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
 Предоконечный каскад имеет большое усиление по напряжению за счет того, что в коллекторной цепи включена динамическая нагрузка.
 \begin{equation}
 \label{eq:equation3_17}
- K = R_{\text{КН3}} / r_{\text{э3}} = (R_{\text{ВХ4}} ( R_{\text{6Д}} + К_7)) / r_{\text{э3}} = (h_{21} R_{н}) / r_{\text{э3}} = (600 \cdot 2) / 0.625 = 1920
+ K = \dfrac{R_{\text{КН3}}}{r_{\text{э3}}} = \dfrac{R_{\text{ВХ4}} ( R_{\text{6Д}} + К_7)}{ r_{\text{э3}}} = \dfrac{h_{21} R_{н}}{r_{\text{э3}}}
 \end{equation}
+\begin{equation*}
+ \input{formulas/3_17}
+\end{equation*}
 
 Входное сопротивление оконечных каскадов состоит из малого входного сопротивления транзистора по схеме с общим эмиттером и сопротивлением, учитывающим влияние местной ООС, тем самым увеличивая входное сопротивление.  Влияние R9 и R10 , ввиду их малости, можно не учитывать. \par
 

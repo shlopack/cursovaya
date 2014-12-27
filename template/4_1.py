@@ -1,1 +1,1 @@
-template = 'I_{\\text{0 К1}} = (5 \ldots 10) I_{\\text{Б m3}} / h_{\\text{21 3}} = 7 \cdot 0.024 / %.0f = %.1f ~ \\text{мА} '%(h_21_3,I_0k1)
+template = 'I_{\\text{0 К1}} = (5 \ldots 10) I_{\\text{Б m3}} / h_{\\text{21 3}} = 7 \cdot 0.024 / %.0f = %.1f ~ \\text{мА} '%(h_21_3,I_0k1*1000)

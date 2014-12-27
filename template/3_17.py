@@ -1,1 +1,1 @@
-template = ' K = R_{\\text{КН3}} / r_{\\text{э3}} = (R_{\\text{ВХ4}} ( R_{\\text{6Д}} + К_7)) / r_{\\text{э3}} = (h_{21} R_{н}) / r_{\text{э3}} = (%.0f \cdot %.0f) / 0.625 = %.0f'%(h_21,R_n,K)
+template = ' K = (%.0f \cdot %.0f) / 0.625 = %.0f'%(h_21,R_n,K)

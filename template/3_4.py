@@ -1,1 +1,1 @@
-template = ' R_{\\text{6Д}} = \dfrac{R_6}{1-K_{\\text{ОК}}} = 10 \cdot %.3f = %.0f~\\text{Ом}'%(R6,R6d)
+template = ' R_{\\text{6Д}} = \dfrac{R_6}{1-K_{\\text{ОК}}} = 10 \cdot %.0f = %.0f~\\text{Ом}'%(R6,R6d)
