@@ -46,3 +46,92 @@
     Т.о. видно, что не происходит взаимного влияния низкочастотного и высокочастотного регулятора.
 
 % subsubsection subsubsection_name (end)
+
+\subsubsection{Сопротивления подстроечных резисторов R = R2 = R5:}
+\begin{equation}
+   \label{eq:equation5_5}
+R=0.5 \cdot R_{\text{ВХ СЛ}}=0.5 \cdot R_{\text{ВХ КПУ 2}}=0.5 \cdot cdot 10^6=100~\text{кОм}
+\end{equation} 
+
+\subsubsection{ Номиналы регистров регулирования НЧ:}
+\begin{equation}
+   \label{eq:equation5_6}
+   R_1=\dfrac{R}{m}=100 \cdot 10^3 /4 =25~\text{кОм}
+   \end{equation} 
+   \begin{equation}
+   \label{eq:equation5_7}
+   R_3=\dfrac {R_1}{m}=25 \cdot 10^3/4=6250~\text{Ом}
+   \end{equation} 
+   \subsubsection{ 6. Сопротивление буферного  резистора R4.}
+   Буферный резистор обеспечивает развязку  низкочастотного и высокочастотного регуляторов. 
+   \begin{equation}
+   \label{eq:equation5_6}
+   R_4=(0.05 \ldots 0.1) \cdot R=(0.05 \ldot 0.1) \cdot 100 \cdot 10^3 = 5000~\text{Ом}
+   \end{equation} 
+   \subsubsection{    Задание номинальных значений емкостей.}
+   Емкости в схеме регулятора тембра обеспечивают его работу как фильтра.
+   \begin{equation}
+   \label{eq:equation5_7}
+   C_1=\dfrac{1}{2 \cdot \pi \cdot 60 \cdot 4 \cdot 100 \cdot 10^3}=66~\text{нФ}
+   \end{equation} 
+   \begin{equation}
+   \label{eq:equation5_8}
+   С_2=m \cdot C_1=5 \cdot 5 \cdot 0.27= 264~\text {нФ}
+   \end{equation} 
+        Емкости С3 и С4 формируют ВЧ-регулятор.
+        \begin{equation}
+   \label{eq:equation5_9}
+   C_3=\dfrac {m^2}{(4\cdot \pi \cdot f_{\text{в}}\cdot m \cdot R) }= 4^2/(4 \cdot \pi \cdot 12000 \cdot 100 \cdot 10^3)=1~\text{нФ}
+   \end{equation} 
+  \begin{equation}
+   \label{eq:equation5_10}
+ C_4=m \cdot C_3=4 \cdot 1 \cdot 10^-9=4~\text{нФ}
+\end{equation} 
+\subsubsection{   Задание входного и выходного сопротивления регулятора тембра.   }
+\begin{equation}
+   \label{eq:equation5_11}
+R_{\text{ВХ T}}=R_1+R_3=25000+6250=31250~\text{Ом}
+\end{equation} 
+\begin{equation}
+   \label{eq:equation5_12}
+   R_{\text{ВХ Т}}=R_4+\defrac {R_1 \cdot R_3}{R_1+R_3} = 5000+25000 \cdot 6250 /(2500+6250)=10~\text{кОм}
+   \end{equation}
+
+\subsubsection{ Определение требования к выходному сопротивления предыдущего каскада (КПУ 1)   }
+
+\begin{equation}
+   \label{eq:equation5_12}
+   R_{\text{ВЫХ ПРЕД}}=0.2 \cdot R_{\text{ВХ Т}}=0.2 \ cdot 31250=6250~\text{Ом}
+\end{equation}
+Выходное сопротивление предшествующего каскада для регулятора тембра представляет собой эквивалентное сопротивление генератора сигнала. Для согласования каскада и передачи сигнала с минимальными потерями оно выбирается в 5…10 раз меньше входного сопротивления регулятора тембра.
+
+\subsubsection{ Определение положения движков R2 и R5, соответствующие линейной частотной характеристике:}
+
+  \begin{equation}
+  \label{eq:equation5_12}
+  R^,,=\dfrac{R \cdot m}{m^2-1}=100 \cdot 10^3 \cdot  4/(16-1)=26670~\text{Ом}
+  \end{equation}
+
+  \begin{equation}
+  \label{eq:equation5_13}
+  R^,=R-R^,,=100 \cdot 10^3 -26670=73~\text{кОм}
+  \end{equation}
+
+  \subsubsection{ Номинальный коэффициент передачи тембра на средних частотах имеет вид:}
+   
+  \begin{equation}
+  \label{eq:equation5_14}
+   K=\dfrac {R_3}{R_1+R_3}=6250/(2500+6250)=0.2
+  \end{equation}
+
+  Регулировка тембра на НЧ осуществляется за счет резисторов R3 и R1. Они определяют основное изменение напряжения генератора до уровня непосредственно усилителя мощности. Предел регулировки тембра и характеризует изменение АЧХ тембра, т.е. усиление по напряжению.
+
+  \subsubsection{  Номинальное входное напряжение РТ:}
+
+  \begin{equation}
+  \label{eq:equation5_12}
+   U_{\text{ВХ Т}}=\dfrac{U_{\text{ВХ СЛЕД}}}{K}=0.016/0.2=0.08~\text{В}
+  \end{equation}
+
+
+   

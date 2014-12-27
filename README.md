@@ -14,6 +14,7 @@
 --- формула
 
 \dfrac{a}{b} - a/b
+\sqrt{a+b}
 
 \cdot - *
 \ldots - ...
