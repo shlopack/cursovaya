@@ -1,1 +1,1 @@
-template = 'R_{\\text {ЭКВ}}=R_4 \cdot R / (R_4+R)=%.0f \cdot %.0f / (%.0f+%.0f)=%.0f~\\text{Ом}'%(R4,R,R_ekv)
+template = 'R_{\\text {ЭКВ}}=R_4 \cdot R / (R_4+R)=%.0f \cdot %.0f / (%.0f+%.0f)=%.0f~\\text{Ом}'%(R4,R,R4,R,R_ekv)

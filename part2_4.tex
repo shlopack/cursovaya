@@ -15,35 +15,37 @@ R5, R4 и C1 – цепь обратной связи. По постоянном
 
 \begin{equation}
 \label{eq:equation4_1}
- I_{\text{0 К1}} = (5 \ldots 10) I_{\text{Б m3}} / h_{\text{21 3}} = 7 \cdot 0.024 / 80 = 2.1~\text{мА} 
+ \input{formulas/4_1}
 \end{equation}
 
 \subsubsection{Параметры выбора транзисторов:}
 
 \begin{equation}
-\label{eq:equation4_1}
- I_{\text{ К1}} = (1.1 \ldots 1.3) I_{\text{{0 К1}} = 1.1 \cdot 0.021 = 2.5~\text{мА} }
+\label{eq:equation4_1d}
+ \input{formulas/4_1dop}
 \end{equation}
 \begin{equation}
 \label{eq:equation4_2}
-f_{\text {h21}}=(5\ldots 10)f_{\text{{R}}}=8*12000=99~\text{кГЦ}
+\input{formulas/4_2}
 \end{equation}
 
 тут типо таблица ,но я их не умею делать априори
 
 \subsubsection{Выбор сопротивления $R_{\text{2}}$:}
-
 \begin{equation}
 \label{eq:equation4_3}
-R_{\text {2}}=U_{\text{БЭ3}/(I_{\text{0K1}}-I_{\text{0БЗ}})=(0.6 \idolts 0.7)/(0.0021-0.02/80)=390~\text{Ом}}
+\input{formulas/4_3}
 \end{equation}
 
-\subsection {Выбор сопротивления $R_{\text{3}}$:}
+\subsubsection{Выбор сопротивления $R_{\text{3}}$:}
 
 \begin{equation}
 \label{eq:equation4_4}
-R_{\text {3}}=\dfrac{E_{\text{0}-(U_{\text{БЭ}} {2 \cdot I_{\text{0Э1}})}=(E_\text{0}}-{U_{\text {БЭ1}}) / 2 \cdot(I_\text{0K1}}+I_\text{0K1}}  h_{\text {21}})==(15-0.7) 2 \cdot(0.0021+0.0021 \dfrac 50) =3.3~\text{кОм}
+R_3=\dfrac{E_{\text{0}}- U_{\text{БЭ}}} {2 \cdot I_{\text{0Э1}}} = \dfrac{E_{\text{0}}-U_{\text {БЭ1}}}{ 2 \cdot ( I_\text{0K1}+I_\text{0K1} / h_\text{21} )}
 \end{equation}
+\begin{equation*}
+\input{formulas/4_4}
+\end{equation*}
 
 
 \subsubsection {Цепь обратной связи :}
@@ -53,20 +55,23 @@ R_{\text {3}}=\dfrac{E_{\text{0}-(U_{\text{БЭ}} {2 \cdot I_{\text{0Э1}})}=(E_
 
 \begin{equation}
 \label{eq:equation4_5}
-\beta = [\dfrac {R_{\text{ЭКВ}}}{R_{5}+R{\text{ЭКВ}}}] \cdot [\dfrac {r_{\text{БЭ1}}}{R}]=155/(5000+280) \cdot (600/3125)=0.0056
+\input{formulas/4_5}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation4_6}
-R=2 \cdot h_{11}+R_{\text{ЭГ}}=2 \cdot h_{11}+R_1 \cdot 2 \cdot h_{11}+\dfrac{R_1 \cdot R_{\text{Г}}}{(R_1+R_{\text{Э}})}=2 \cdot h_{11}+R_{\text{ЭГ}}=2 \cdot 625 +1875=3125~\text{Ом}
+R=2 \cdot h_{11}+R_{\text{ЭГ}}=2 \cdot h_{11}+R_1 \cdot 2 \cdot h_{11}+\dfrac{R_1 \cdot R_{\text{Г}}}{(R_1+R_{\text{Э}})}=2 \cdot h_{11}+R_{\text{ЭГ}}
 \end{equation}
+\begin{equation*}
+\input{formulas/4_6}
+\end{equation*}
 
 Сопротивление RЭГ является сопротивлением между базой транзистора VT1-VT2 и землей по переменному току. При расчете RЭГ необходимо руководствоваться следующими соображениями:
 \begin{equation}
 \label{eq:equation4_7}
-R_{\text{ЭГ}}=\dfrac{R_1 \cdot R_{\text{Г}}}{R_1+R_{\text{Г}}}=5000 \cdot 3000 / 8000 = 1875~\text{ОМ}
-
+\input{formulas/4_7}
 \end{equation}
+
 При этом RГ – выходное сопротивление каскада предварительного усиления, выполненного по схеме эмиттерного повторителя. Входное сопротивление этого усилителя имеет большую величину, выходное относительно малую порядка сотен Ом и зависит от сопротивления выходного регулятора тембра, который имеет большое входное сопротивление, порядка тысяч Ом.
 Для того чтобы сопротивление R1, включенное параллельно RГ, существенно не влияло на сопротивление генератора, примем его равным порядка кила Ом:
 
@@ -74,15 +79,13 @@ R_{\text{ЭГ}}=\dfrac{R_1 \cdot R_{\text{Г}}}{R_1+R_{\text{Г}}}=5000 \cdot 30
 \label{eq:equation4_8}
 R_1= 5~\text{кОм и }~R_{\text{Г}} = 3000 ~\text{Ом} 
 \end{equation}
-
 \begin{equation}
 \label{eq:equation4_9}
-h_{\text{11}}=\dfrac{(1+h_{\text{21}}) \cdot \psi_{\text{Т}}}{  I_{\text{0 Э1}}} = (1+50)\cdot 0.025 / 0.002 =625~\text{Ом}
+\input{formulas/4_9}
 \end{equation}
 \begin{equation}
-
 \label{eq:equation4_10}
-R_{\text {ЭКВ}}=R_4 \cdot R / (R_4+R)=306 \cdot 3125 / (3125+306)=208~\text{Ом}
+\input{formulas/4_10}
 \end{equation}
 Для сохранения идентичности режимов VT1 и VT2 сопротивление R1 выбирается равным R5. R5 выбираем из ряда:
 \begin{equation}
@@ -93,15 +96,18 @@ R_{\text{5}}=(20 \ldots 100) \cdot R_{\text{Н}}=100 \cdot 2 = 200~\text{Ом}
 \label{eq:equation4_12}
 R_{\text{5}}=5000~\text{Ом}
 \end{equation}
+
 \begin{equation}
 \label{eq:equation4_13}
-\R_{\text{4}}=\dfrac{(F-1) \cdot R \cdot R_{\text{5}}}{h_{\text{21}} \cdot R_{\text{КН1}} \cdot K_{\text{ПОК}}-(F-1)\cdot (R+R_{\text{5}})}=24 \cdot 3125 \cdot 5000 / (50 \cdot 631-24 \cdot 8125)=306~\text{Ом}
-
-
+R_4=\dfrac{(F-1) \cdot R \cdot R_5}{h_{\text{21}} \cdot R_{\text{КН1}} \cdot K_{\text{ПОК}}-(F-1)\cdot (R+R_{\text{5}})}
 \end{equation}
+\begin{equation*}
+\input{formulas/4_13}
+\end{equation*}
+
 \begin{equation}
 \label{eq:equation4_14}
-R_{\text{КН1}}=\dfrac{R_2 \cdot R_{\text{ВХ3}}}{ R_{\text{2}}+R_{\text{ВХ3}}}=390 \cdot 51/ (390+51)=45~\text{Ом}
+\input{formulas/4_14}
 \end{equation}
 
 Отношение R4  к R5 характеризует ООС по переменному току. За счет сопротивления R4 по переменному току обратная связь не 100\%, но за счет малости R4 имеет величину порядка 95\%.
@@ -110,15 +116,14 @@ R_{\text{КН1}}=\dfrac{R_2 \cdot R_{\text{ВХ3}}}{ R_{\text{2}}+R_{\text{ВХ3
 
 \begin{equation}
 \label{eq:equation4_15}
-K_{\text{П}}=\beta \cdot K_{\text{ВК}} \cdot K_{\text{ПОК}} \cdot K_{\text{OK}}=0.0056 \cdot 3.8 \cdot 631 \cdot 1 =13
-
+\input{formulas/4_15}
 \end{equation}
 
 \begin{equation}
 \label{eq:equation4_16}
-K_{\text{ВК}}=S_1 \cdot R_{\text{КН1}}=\dfrac{R_{\text{КН1}}}{r_{\text{Э}}}=45 \cdot 0.0021/0.0025=3.8
-
+\input{formulas/4_16}
 \end{equation}
+
 \begin{equation}
 \label{eq:equation4_17}
 K_{\text{ОК}}=1
@@ -128,8 +133,11 @@ K_{\text{ОК}}=1
 
 \begin{equation}
 \label{eq:equation4_18}
-R_{\text{ВХВК}}=\dfrac{R_1 \cdot (2 h_{11}+R_4) \cdot F}{R_1+(2 \cdot h_{11}+R_{\text{4}}) \cdot F} = 5000 \cdot(2 \cdot 625+306) \cdot 25 / (5000+(2 \cdot+306) \cdot 25)=4600~\text{Ом}
+R_{\text{ВХВК}}=\dfrac{R_1 \cdot (2 h_{11}+R_4) \cdot F}{R_1+(2 \cdot h_{11}+R_{\text{4}}) \cdot F} 
 \end{equation}
+\begin{equation*}
+\input{formulas/4_18}
+\end{equation*}
 
 Конденсатор C2 служит для устранения возможности самовозбуждения на высоких частотах:
 

@@ -1,1 +1,1 @@
-template = 'I_{\\\ text{к доп}} = (1.2 \ldots 1.5) I_{\\\ text{к 3m}} = 1.3 \cdot %.3f = %.3f~\\\ text{А}'%(I_k3m,I_k3d)
+template = 'I_{\\text{к доп}} = (1.2 \ldots 1.5) I_{\\text{к 3m}} = 1.3 \cdot %.3f = %.3f~\\text{А}'%(I_k3m,I_k3d)

@@ -1,1 +1,1 @@
-template = 'K_{\\text{П}}=\beta \cdot K_{\\text{ВК}} \cdot K_{\\text{ПОК}} \cdot K_{\\text{OK}}=%.4f \cdot %.1f \cdot %.0f \cdot %.0f =%.0f'%(beta,K_vk,K_pok,K_ok)
+template = 'K_{\\text{П}}=\\beta \cdot K_{\\text{ВК}} \cdot K_{\\text{ПОК}} \cdot K_{\\text{OK}}=%.4f \cdot %.1f \cdot %.0f \cdot %.0f =%.0f'%(beta,K_vk,K_pok,K_ok,K_p)

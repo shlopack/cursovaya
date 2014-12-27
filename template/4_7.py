@@ -1,1 +1,1 @@
-template = 'R_{\\text{ЭГ}}=\dfrac{R_1 \cdot R_{\\text{Г}}}{R_1+R_{\\text{Г}}}=%.0f \cdot %.0f / %.0f = %.0f~\\text{ОМ}'%(R1,R_g,R_eg)
+template = 'R_{\\text{ЭГ}}=\dfrac{R_1 \cdot R_{\\text{Г}}}{R_1+R_{\\text{Г}}}=%.0f \cdot %.0f / (%.0f + %.0f) = %.0f~\\text{Ом}'%(R1,R_g,R1,R_g,R_eg)
