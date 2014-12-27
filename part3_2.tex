@@ -8,12 +8,12 @@
 
   \begin{equation}
   \label{eq:equation6_1}
-    U_{\text{нм}} = U_{\text{н}} \cdot \sqrt{2} = 0.019 \cdot \sqrt{2} = 0.027~\text{В};
+    \input{formulas/6_1}
   \end{equation}
 
   \begin{equation}
   \label{eq:equation6_2}
-    I_{\text{нм}} = U_{\text{нм}} / R_{\text{н}} = 0.027 / 2854 = 9.5~\text{мкА}.
+    \input{formulas/6_2}
   \end{equation}  
 
   \subsubsection{Ток покоя:}  
@@ -22,18 +22,18 @@
 
   \begin{equation}
   \label{eq:equation6_3}
-    I_{\text{ок}} \geq (5 \ldots 10) \cdot I_{\text{нм}} = 10 \cdot 9.5 \cdot 10^{-6} = 95~\text{мкА}.
+    \input{formulas/6_3}
   \end{equation} 
 
   Который не удовлетворяет условию тока, необходимому для раскачки УМ: $I_{\text{ок}} = 0.5 \ldots 2$мА. 
-  Выбираем ток покоя $$I_{\text{ок}}$$ = 0.5 мА.
+  Выбираем ток покоя $I_{\text{ок}}$ = 0.5 мА.
 
 
   \subsubsection{Напряжение коллектор-эмиттер транзистора:}  
 
   \begin{equation}
   \label{eq:equation6_4}
-    U_{\text{кэ}} \geq U_{\text{Нm}} + U_{\text{КЭmin}} = 0.027+2 = 2.027~\text{В}.
+   \input{formulas/6_4}
   \end{equation}   
 
   При этом $U_{\text{КЭmin}} = 1 \ldots 2$ В.
@@ -43,26 +43,26 @@
 
   \begin{equation}
   \label{eq:equation6_5}
-    E_{\text{0П}} \geq (2 \ldots 3) U_{\text{КЭ}} = 3 \cdot 4 = 12~\text{В};
+    \input{formulas/6_5}
   \end{equation} 
 
   \begin{equation}
   \label{eq:equation6_6}
-    E_{\text{0}} = (1.2 \ldots 1.3) E_{\text{0П}} = 1.3 \cdot 12 = 14.4~\text{В}.
+    \input{formulas/6_6}
   \end{equation} 
 
   \subsubsection{Сопротивление в цепи эмиттера:}  
   
   \begin{equation}
   \label{eq:equation6_7}
-    R_{\text{Э}} = R_4 + R_5 = \dfrac{U_{\text{Э}}}{I_{\text{0Э}}} = 0.3 \cdot \dfrac{E_{\text{0П}}}{I_{\text{0К}}} = 7.2~\text{кОм}.
+    \input{formulas/6_7}
   \end{equation}
 
   \subsubsection{Определяем сопротивление R3:} % (fold)
 
   \begin{equation}
   \label{eq:equation6_8}
-    R_3 = \dfrac{ E_{\text{0П}} - U_{\text{КЭ}} - U_{\text{Э}}}{I_{\text{0К}}} = \dfrac{12- 44 -3.6}{0.5\cdot 10^{-3}} = 8.8~\text{кОм}.
+    \input{formulas/6_8}
   \end{equation}
 
   % subsubsection определяем_сопротивление_r3_ (end)
@@ -70,7 +70,7 @@
   
   \begin{equation}
   \label{eq:equation6_9}
-    I_{\text{Кm}} = \dfrac{U_{\text{нм}}}{R_3 \cdot R_{\text{н}}} = \dfrac{0.027 \cdot 11.7}{8.8 \cdot 2854} = 0.013~\text{мА}.
+   \input{formulas/6_9}
   \end{equation}
   % subsubsection _амплитуда_тока_ (end)
   
@@ -78,7 +78,7 @@
 
   \begin{equation}
   \label{eq:equation6_10}
-    P_{\text{К}} = U_{\text{кэ}} cdot I_{\text{0К}} = 4 \cdot 0.5 \cdot 10^{-3} = 2~\text{мВт}. 
+    P_{\text{К}} = U_{\text{кэ}} \cdot I_{\text{0К}} = 4 \cdot 0.5 \cdot 10^{-3} = 2~\text{мВт}. 
   \end{equation}
   
   % subsubsection мощность_рассеиваемая_на_коллекторном_переходе_ (end)
@@ -123,7 +123,7 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
 Расчетный параметр h21:
 \begin{equation}
    \label{eq:equation6_15}
-h_21=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
+h_{21}=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
 \end{equation} 
 
  \subsubsection{Расчет базвой цепи:}
@@ -136,7 +136,7 @@ h_21=\sqrt{h_{21min} \cdot h_{21max}}=\sqrt{40 \cdot 200}=89
  определение сопротивлений базового делителя:
  \begin{equation}
    \label{eq:equation6_17}
-   R_1=\dfrac{E_0-U{\text{Э}}-U{\text{БЭ}}}{I{\text{ОБ}}+I{\text{Д}}}=\dfrac{E_0-U_{\text{Э}}-U{\text{БЭ}}}{ \dfrac{I{\text{ОК}}}{ {h_21}}+I{\text{Д}} }
+   R_1=\dfrac{E_0-U{\text{Э}}-U_{\text{БЭ}}}{I_{\text{ОБ}}+I_{\text{Д}}}=\dfrac{E_0-U_{\text{Э}}-U_{\text{БЭ}}}{ \dfrac{I_{\text{ОК}}}{ h_{21}}+I_{\text{Д}} }
    \end{equation}
    \begin{equation*}
    R_1=(12.3-3.6-0.7)/(0.5 \cdot 10^-3/89+0.87 \cdot 10^-6)=1.2~\text{МОм}
@@ -158,20 +158,21 @@ K=\dfrac{1+h_21 \cdot R_{\text{ЭН}}}{(1+h_21)\cdot R_{\text{ЭН}}+h_11}=\dfra
 \subsubsection{Номинальное входное напряжение:}
 \begin{equation}
    \label{eq:equation6_20}
-U_{\text{ВХ}}=\dfrac {U_{\text{Н}}}{K}=16 \cdot 10^-3 /0.98= 16.3~\text {Мв}
+U_{\text{ВХ}}=\dfrac {U_{\text{Н}}}{K}=16 \cdot 10^{-3} /0.98= 16.3~\text {мВ}
 \end{equation}
 \subsubsection{Входное сопротивление каскада:}
 \begin{equation}
    \label{eq:equation6_21}
-R_{\text{ВХ}}=\dfrac{1}{\dfrac{1}{R_{ВХ Т}+\dfrac{1}{R_1}+\dfrac{1}{R_2}}}=1/(1/256 \cdot 10^3 +1/1.2 \cdot 10^6 =1/5 \cdot 10^6)=0.2\text{МОм}
+R_{\text{ВХ}}=\dfrac{1}{\dfrac{1}{R_\text{ВХ Т}}+\dfrac{1}{R_1}+\dfrac{1}{R_2}}=1/(1/256 \cdot 10^3 +1/1.2 \cdot 10^6 + 1/5 \cdot 10^6)=0.2\text{МОм}
 \end{equation}
 \begin{equation}
    \label{eq:equation6_22}
-R_{\text{ВХ Т}}=h_11+\dfrac(1+h_21)\cdot R_{\text{ЭН}}=h_21 \cdot h_{\text{Э}}+(1+h_21) \cdot R_{\text{ЭН}}=h_11+(1+h_21) \cdot R_{\text{ЭН}}
+R_{\text{ВХ Т}}=h_{11}+(1+h_{21})\cdot R_{\text{ЭН}}=h_{21} \cdot h_{\text{Э}}+(1+h_{21}) \cdot R_{\text{ЭН}}=h_{11}+(1+h_{21}) \cdot R_{\text{ЭН}}
 \end{equation}
 \begin{equation*}
 R_{\text{ВХ Т}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
 \end{equation*}
+
 \subsubsection{Итоговые данные второго каскада предварительного усиления:}
 табличка
 табличка

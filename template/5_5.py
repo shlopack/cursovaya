@@ -1,1 +1,1 @@
-template = 'R=0.5 \cdot R_{\\text{ВХ СЛ}}=0.5 \cdot R_{\\text{ВХ КПУ 2}}=0.5 \cdot  %.0f=%.0f~\\text{кОм}'%(R_vhvk,R2)
+template = 'R=0.5 \cdot R_{\\text{ВХ СЛ}}=0.5 \cdot R_{\\text{ВХ КПУ 2}}=0.5 \cdot  %.0f=%.1f~\\text{кОм}'%(R_vhvk,R2/1000)

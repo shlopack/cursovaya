@@ -1,1 +1,1 @@
-template = 'C_4=m \cdot C_3=%.0f \cdot %.9f=%.0f~\\text{нФ}'%(m,C3,C4)
+template = 'C_4=m \cdot C_3=%.0f \cdot %.2f=%.0f~\\text{нФ}'%(m,C3,C4)

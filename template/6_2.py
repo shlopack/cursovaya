@@ -1,1 +1,1 @@
-template = 'I_{\\text{нм}} = U_{\\text{нм}} / R_{\\text{н}} = %.3f / %.0f = %.1f~\\text{мкА}.'%(params)
+template = 'I_{\\text{нм}} = U_{\\text{нм}} / R_{\\text{н}} = %.3f / %.0f = %.1f~\\text{мкА}.'%(U_nm, R_n, I_nm*1000000)

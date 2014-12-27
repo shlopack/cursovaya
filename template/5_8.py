@@ -1,1 +1,1 @@
-template = 'R_4=(0.05 \ldots 0.1) \cdot R=(0.05 \ldot 0.1) \cdot %.0f \cdot 10^3 = %.0f~\\text{Ом}'%(R2,R4)
+template = 'R_4=(0.05 \ldots 0.1) \cdot R=(0.05 \ldots 0.1) \cdot %.0f \cdot 10^3 = %.0f~\\text{Ом}'%(R2,R4)

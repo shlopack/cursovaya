@@ -1,1 +1,1 @@
-template = 'U_{\\text{нм}} = U_{\\text{н}} \cdot \sqrt{2} = %.3f \cdot \sqrt{2} =  %.3f~\\text{U_n,U_nm)
+template = 'U_{\\text{нм}} = U_{\\text{н}} \cdot \sqrt{2} = %.3f \cdot \sqrt{2} =  %.3f~\\text{В}'%(U_n,U_nm)

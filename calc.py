@@ -133,7 +133,7 @@ h_11_1 = (1 + h_21_1)*0.025/I_0k1
 R_vhvk = (R1 * (2*h_11_1 + R4) * F) / (R1 + (2*h_11_1 + R4) * F)
 
 
-C2 = (R2 + R_vh_3) / (2*math.pi*f_h * K_pok * R2 * R_vh_3) * math.pow(10, 12)
+C2 = (R2 + R_vh_3) / (2*math.pi*f_h*K_pok * R2 * R_vh_3 * R3) * math.pow(10, 12)
 C1 = 1/(2*math.pi * f_l * R4 * math.sqrt(M * M - 1)) * math.pow(10, 6)
 
 K_um = 1 / beta
@@ -141,12 +141,12 @@ K_um_1 = K_vk * K_pok * K_ok / (1 + K_p)
 U_vhvk = U_nm / K_um
 
 
-names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8', 
-'2_9', '2_10', '2_11', '2_14', '2_15', '2_16', '2_17', '2_18',  
-'2_19', '2_20', '2_21', '2_22', '3_1', '3_2', '3_3', '3_4', '3_5', 
+names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8',
+'2_9', '2_10', '2_11', '2_14', '2_15', '2_16', '2_17', '2_18',
+'2_19', '2_20', '2_21', '2_22', '3_1', '3_2', '3_3', '3_4', '3_5',
 '3_6', '3_7', '3_8', '3_9', '3_10', '3_17', '4_1', '4_1dop',
 '4_2', '4_3', '4_4', '4_5', '4_6', '4_7', '4_9', '4_10', '4_13',
-'4_14', '4_15', '4_16', '4_18']
+'4_14', '4_15', '4_16', '4_18', '4_19', '4_20', '4_21', '4_22']
 for name in names:
 	command = open('template/{0}.py'.format(name), 'rb').read()
 	command = command.decode('utf8')
@@ -181,12 +181,13 @@ R5 = R2
 R1 = R2 / m
 R3 = R1 / m
 R4 = 0.1 * R2
-C1 = 1 / (2 * math.pi * f_l * m * R2)
+C1 = 1 / (2 * math.pi * f_l * m * R2) * math.pow(10, 9)
 C2 = m * C1
-C3 = (m*m) / (4 * math.pi * f_h * R2)
+C3 = (m*m) / (4 * math.pi * f_h * R2) * math.pow(10, 9)
 C4 = m * C3
 R_vht = R1 + R3
 R_viht = R4 + (R1*R3)/(R1+R3)
+R_vih_pr = R_viht * 0.2
 R__ = (R2*m)/(m*m - 1)
 R_ = R2 - R__
 
@@ -210,7 +211,37 @@ E_0 = 1.2 * E_0p
 R_e = 0.3 * E_0p / I_ok
 R3 = (E_0p - U_ke - 3.6) / I_ok
 
-I_km = U_n / (R3 * R_n)
+I_km = U_n / (R3)
 
-print(P_k_3_d)
+R_en = R_n * R_e / (R_n + R_e)
+P_k = U_ke * I_ok
+P_kd = 1.3*P_k
+
+U_ke_ = E_0
+
+I_kd = 1.3*(I_ok + I_km)
+fh_21 = 30*f_h
+h21 = math.sqrt(40*200)
+I_d = 10*I_km/h21
+
+R1 = (E_0 - U_ke - 0.7) / (I_ok / h21 + I_d)
+R2 = (0.7 + U_ke)/I_d
+
+r_e = 25/I_0
+K = R_en / (R_en + r_e)
+
+U_vh = U_n/K
+R_vht = 89 + (1+h21)*R_en
+R_vh = 1/(1/R_vht + 1/R1 + 1/R2)
+
+names = ['5_2', '5_4', '5_5', '5_6', '5_7', '5_8', '5_9', '5_10',
+'5_11', '5_12', '5_13', '5_14', '5_15', '5_16', '5_17', '5_18', '5_19',
+'6_1', '6_2', '6_3', '6_4', '6_5', '6_6', '6_7', '6_8', '6_9']
+for name in names:
+	command = open('template/{0}.py'.format(name), 'rb').read()
+	command = command.decode('utf8')
+	exec(command)
+	write_formula(name, template)
+
+print(K, R_vh)
 print('all right')      

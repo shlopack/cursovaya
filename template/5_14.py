@@ -1,1 +1,1 @@
-template = 'R_{\\text{ВХ Т}}=R_4+\defrac {R_1 \cdot R_3}{R_1+R_3} = %.0f+%.0f \cdot %.0f /(%.0f+%.0f)=%.0f~\\text{кОм}'%(R4,R1,R3,R_viht)
+template = 'R_{\\text{ВЫХ Т}}=R_4+\dfrac{R_1 \cdot R_3}{R_1+R_3} = %.0f+%.0f \cdot %.0f /(%.0f+%.0f)=%.0f~\\text{Ом}'%(R4,R1,R3,R1,R3,R_viht)

@@ -1,0 +1,1 @@
+template = 'R_{\\text{ВЫХ ПРЕД}}=0.2 \cdot R_{\\text{ВХ Т}}=0.2 \cdot %.0f = %.0f ~\\text{Ом}'%(R_viht, R_vih_pr)

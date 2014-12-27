@@ -1,1 +1,1 @@
-template = 'С_1=\dfrac{1}{2 \cdot \pi\cdot f_{\\text{н}} \cdot R_4 \cdot \sqrt{M^2-1}}=1/[2 \cdot %0.2f \cdot %0.0f \cdot %0.0f \cdot \sqrt{%0.2f^2-1}]=%0.1f~\\text{мкФ}'%(math.pi,f_l,R4,M, math.pow(10, 6))
+template = 'C_1=\dfrac{1}{2 \cdot \pi\cdot f_{\\text{н}} \cdot R_4 \cdot \sqrt{M^2-1}}=1/[2 \cdot %0.2f \cdot %0.0f \cdot %0.0f \cdot \sqrt{%0.2f^2-1}]=%0.1f~\\text{мкФ}'%(math.pi,f_l,R4,M, C1)

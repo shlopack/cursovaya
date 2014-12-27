@@ -1,1 +1,1 @@
-template = 'C_{\\text{2}}=\dfrac{R_{\\text{2}}+R_{\\text{ВХ3}}}{2 \cdot \pi f_{\\text{в}} K_{\\text{ПОК}} \cdot R_2 \cdot R_{ВХ3} }=(%.0f+%.0f)/(2 \cdot %.0f \cdot %.2f \cdot %.0f \cdot %.0f \cdot %.0f)=%.0f~\\text{пФ}'%(R2,R_vh_3,math.pi,f_h,K_pok,math.pow(10, 12))
+template = 'C_2=\dfrac{R_{\\text{2}}+R_{\\text{ВХ3}}}{2 \cdot \pi f_{\\text{в}} K_{\\text{ПОК}} \cdot R_2 \cdot R_{ВХ3} }=(%.0f+%.0f)/(2 \cdot %.3f \cdot %.0f \cdot %.0f \cdot %.0f \cdot %.0f)=%.0f~\\text{пФ}'%(R2,R_vh_3,math.pi,f_h,K_pok, R3, R2, C2)

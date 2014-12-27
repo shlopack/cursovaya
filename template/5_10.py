@@ -1,1 +1,1 @@
-template = 'С_2=m \cdot C_1=%.0f \cdot %.2f= %.0f~\\text {нФ}'%(m,C1,C2)
+template = 'C_2=m \cdot C_1=%.0f \cdot %.2f= %.0f~\\text {нФ}'%(m,C1,C2)

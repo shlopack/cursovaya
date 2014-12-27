@@ -1,1 +1,1 @@
-template = ' I_{\\text{ок}} \geq (5 \ldots 10) \cdot I_{\\text{нм}} = 10 \cdot %.7f = %.0f~\\text{мкА}.'%(I_nm,I_ok)
+template = ' I_{\\text{ок}} \geq (5 \ldots 10) \cdot I_{\\text{нм}} = 10 \cdot %.2f = %.0f~\\text{мкА}.'%(I_nm*1000000,I_ok*1000000)

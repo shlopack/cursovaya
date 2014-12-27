@@ -1,0 +1,1 @@
+template = '%.0f \leq f_0 \leq %.0f'%(_f0, f0_)

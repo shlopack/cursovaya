@@ -1,1 +1,1 @@
-template = 'f_0 = \sqrt{f_{\\text{н}} \cdot f_{\\text{в}}} = \sqrt{ %.0f\cdot %.0f} = %.0f~\\text{Гц}'%(f_l,f_h)
+template = 'f_0 = \sqrt{f_{\\text{н}} \cdot f_{\\text{в}}} = \sqrt{ %.0f\cdot %.0f} = %.0f~\\text{Гц}'%(f_l,f_h, f0)

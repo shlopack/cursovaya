@@ -1,1 +1,1 @@
-template = 'R_3=\dfrac {R_1}{m}=%.0f \cdot 10^3/%.0f=%.0f~\\text{Ом}'%(R1,m,R3)
+template = 'R_3=\dfrac{R_1}{m}=%.0f / %.0f=%.0f~\\text{Ом}'%(R1,m,R3)
