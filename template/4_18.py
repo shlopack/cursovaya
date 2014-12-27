@@ -1,0 +1,1 @@
+template = 'R_{\\text{ВХВК}}=\dfrac{R_1 \cdot (2 h_{11}+R_4) \cdot F}{R_1+(2 \cdot h_{11}+R_{\\text{4}}) \cdot F} = %.0f \cdot(2 \cdot %.0f+%.0f) \cdot %.0f / (%.0f+(2 \cdot+%.0f) \cdot %.0f)=%.0f~\\text{Ом}'%(R1,h_11_1,R4,F,R_vhvk)

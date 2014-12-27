@@ -1,0 +1,1 @@
+template = 'U_{\\text{кэ}} \geq U_{\\text{Нm}} + U_{\\text{КЭmin}} = %.3f+2 = %.3f~\\text{В}.'%(U_n,U_ke)

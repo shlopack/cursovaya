@@ -1,0 +1,1 @@
+template = 'R=2 \cdot h_{11}+R_{\\text{ЭГ}}=2 \cdot h_{11}+R_1 \cdot 2 \cdot h_{11}+\dfrac{R_1 \cdot R_{\\text{Г}}}{(R_1+R_{\\text{Э}})}=2 \cdot h_{11}+R_{\\text{ЭГ}}=2 \cdot %.0f +%.0f=%.0f~\\text{Ом}'%(h_11,R_eg,R)

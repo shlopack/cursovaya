@@ -1,0 +1,1 @@
+template = 'I_{\\text{ К1}} = (1.1 \ldots 1.3) I_{\\text{{0 К1}} = 1.1 \cdot %.3f = %.1f~\\text{мА} }'%(I_0k1,I_k_dop)

@@ -1,0 +1,1 @@
+template = 'U_{\\text{ВХ Т}}=\dfrac{U_{\\text{ВХ СЛЕД}}}{K}=%.3f/%.1f=%.2f~\\text{В}'%(R3,R1,K_sr)

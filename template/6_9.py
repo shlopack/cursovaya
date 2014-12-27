@@ -1,0 +1,1 @@
+template = 'I_{\\text{Кm}} = \dfrac{U_{\\text{нм}}}{R_3 \cdot R_{\\text{н}}} = \dfrac{%.3f \cdot %.1f}{%.1f \cdot %.0f} = %.3f~\\text{мА}'%(U_n,R3,R_n)

@@ -1,0 +1,1 @@
+template = 'E_{\\text{0П}} \geq (2 \ldots 3) U_{\\text{КЭ}} = 3 \cdot %.0f = %.0f~\\text{В};'%(U_ke,E_0p)

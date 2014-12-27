@@ -1,0 +1,1 @@
+template = 'I_{\\text{нм}} = U_{\\text{нм}} / R_{\\text{н}} = %.3f / %.0f = %.1f~\\text{мкА}.'%(params)

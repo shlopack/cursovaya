@@ -1,0 +1,1 @@
+template = '\beta = [\dfrac {R_{\\text{ЭКВ}}}{R_{5}+R{\\text{ЭКВ}}}] \cdot [\dfrac {r_{\\text{БЭ1}}}{R}]=%.0f/(%.0f+%.0f) \cdot (600/%.0f)=%.4f'%(R_ekv,R5,R,beta)

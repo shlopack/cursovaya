@@ -1,0 +1,1 @@
+template = 'R_{\\text{КН1}}=\dfrac{R_2 \cdot R_{\\text{ВХ3}}}{ R_{\\text{2}}+R_{\\text{ВХ3}}}=%.0f \cdot %.0f/ (%.0f+%.0f)=%.0f~\\text{Ом}'%(R2,R_vh_3,R2,R_kn1)

@@ -1,0 +1,1 @@
+template = 'K_{\\text{ВК}}=S_1 \cdot R_{\\text{КН1}}=\dfrac{R_{\\text{КН1}}}{r_{\\text{Э}}}=%.0f \cdot %.4f/0.0025=%.0f'%(R_kn1,I_0k1,K_vk)

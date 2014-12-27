@@ -1,0 +1,1 @@
+template = 'R_1=\dfrac{R}{m}=%.0f /%.0f =%.0f~\\text{кОм}'%(R2,m,R1)

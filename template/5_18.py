@@ -1,0 +1,1 @@
+template = 'K=\dfrac {R_3}{R_1+R_3}=%.0f/(%.0f+%.0f)=%.1f'%(R3,R1,K_sr)

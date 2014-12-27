@@ -1,0 +1,1 @@
+template = 'E_{\\text{0}} = (1.2 \ldots 1.3) E_{\\text{0П}} = 1.2 \cdot %.0f = %.1f~\\text{В}.'%(E_0p,E_0)

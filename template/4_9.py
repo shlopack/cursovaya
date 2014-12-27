@@ -1,0 +1,1 @@
+template = 'h_{\\text{11}}=\dfrac{(1+h_{\\text{21}}) \cdot \psi_{\\text{Т}}}{  I_{\\text{0 Э1}}} = (1+%.0f)\cdot 0.025 / %.3f =%.0f~\\text{Ом}'%(h_21_1,I_0k1,h_11_1)

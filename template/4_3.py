@@ -1,0 +1,1 @@
+template = 'R_{\\text {2}}=U_{\\text{БЭ3}/(I_{\\text{0K1}}-I_{\\text{0БЗ}})=(0.6 \idolts 0.7)/(%.4f-%.2f/%.0f)=%0.0f ~\\text{Ом}}'%(I_0k1,h_21_1,R2)

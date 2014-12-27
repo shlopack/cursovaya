@@ -1,0 +1,1 @@
+template = 'R_{\\text{Э}} = R_4 + R_5 = \dfrac{U_{\\text{Э}}}{I_{\\text{0Э}}} = 0.3 \cdot \dfrac{E_{\\text{0П}}}{I_{\\text{0К}}}=0.3 / %.4f = %.1f~\\text{кОм}.'%(E_0p,I_ok,R_e)

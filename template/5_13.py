@@ -1,0 +1,1 @@
+template = 'R_{\\text{ВХ T}}=R_1+R_3=%.0f+%.0f=%.0f~\\text{Ом}'%(R1,R3,R_vht)
