@@ -99,11 +99,46 @@ f3_h_21 = 2.5*f_h/1000
 #formula 3_17
 K = (h_21*R_n)/0.625
 
+h_21_3 = 80
 
 #2_4
+I_0k1 = 7*0.024 / h_21_3
+I_k_dop = 1.1 * I_0k1
+fh_21_ = 8*f_h / 1000
 
-R_vhvk = 4600
-U_vhvk = 0.02
+h_21_1 = 50
+R2 = 0.7 / (I_0k1 - (I_0k1/h_21_3))
+R3 = (E_0 - 0.7)/(2*(I_0k1 + I_0k1/h_21_1)) / 1000
+
+F = 25
+K_ok = 1
+R_vh_3 = 51
+R_kn1 = R2 * R_vh_3 / (R2 + R_vh_3)
+K_pok = 631
+
+R5 = 5000
+R1 = 5000
+
+R_eg = (R1 * R_g)/(R1 + R_g)
+R = 2 * h_11 + R_eg
+R4 = ((F-1) * R * R5) / (h_21_1 * R_kn1 * K_pok - (F-1) * (R + R5))
+R_ekv = (R4 * R)/(R4+R)
+
+beta = (R_ekv/(R5 + R_ekv)) * (600/R)
+K_vk = R_kn1 * I_0k1 / 0.025
+K_p = beta * K_vk * K_pok * K_ok
+
+h_11_1 = (1 + h_21_1)*0.025/I_0k1
+
+R_vhvk = (R1 * (2*h_11_1 + R4) * F) / (R1 + (2*h_11_1 + R4) * F)
+
+
+C2 = (R2 + R_vh_3) / (2*math.pi*f_h * K_pok * R2 * R_vh_3) * math.pow(10, 12)
+C1 = 1/(2*math.pi * f_l * R4 * math.sqrt(M * M - 1)) * math.pow(10, 6)
+
+K_um = 1 / beta
+K_um_1 = K_vk * K_pok * K_ok / (1 + K_p)
+U_vhvk = U_nm / K_um
 
 
 names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8', 
@@ -173,5 +208,5 @@ R3 = (E_0p - U_ke - 3.6) / I_ok
 
 I_km = U_n / (R3 * R_n)
 
-print(I_km)
+print(I_nm)
 print('all right')      
