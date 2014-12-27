@@ -1,2 +1,1 @@
-template = 'K_{\\text{УМ}}=\dfrac {K_{\\text{Е}}}{K_{\\text{УМ}}}=3.46/171=0.02~\\text{В}'%()
-бля парень я ебал что тут делать тут всего два 3 значение а калке 5 значений
+template = 'K_{\\text{УМ}}=\dfrac {K_{\\text{Е}}}{1+K_{\\text{П}}}=\dfrac {K_{\\text{ВК}} \cdot K_{\\text{ПОК}} \cdot K_{\\text{ОК}}}{1+K_{\\text{Е}}}=%.1f \cdot %.0f \cdot /(1+%.0f)=%.0f'%(K_vk,K_pok,K_ok,K_p)
