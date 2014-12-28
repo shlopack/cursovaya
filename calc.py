@@ -5,6 +5,8 @@ import os
 import sys
 import math
 
+from mako.template import Template
+
 def write_formula(name, text):
 	open('formulas/{0}.tex'.format(name),'wb').write(text.encode('utf-8'))
 
@@ -31,6 +33,7 @@ if (group == '0' or group == '1'):
 	group_pic = 2
 else:
 	group_pic = 1
+
 #calc formulas
 K_e = math.sqrt(P_n*R_n)/E_g
 F = 0.15/K_g
@@ -149,7 +152,6 @@ K_um = 1 / beta
 K_um_1 = K_vk * K_pok * K_ok / (1 + K_p)
 U_vhvk = U_nm / K_um
 
-print(C2,K_pok, R_vh_3, R3)
 names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8',
 '2_9', '2_10', '2_11', '2_14', '2_15', '2_16', '2_17', '2_18',
 '2_19', '2_20', '2_21', '2_22', '3_1', '3_2', '3_3', '3_4', '3_5',
@@ -178,6 +180,29 @@ export = [
 for var in export:
 	open('formulas/{0}.tex'.format(var[0]),'wb').write((var[2]%(var[1])).encode('utf-8'))
 
+print(thermo, group_pic)
+command = open('template/sch/thermo_{0}_{1}.CIR'.format(thermo, group_pic), 'rb').read()
+command = command.decode('utf8')
+compil = Template(command, output_encoding='utf-8', encoding_errors='replace')
+out_c = compil.render(
+	R_n = round(R_n, 0),
+	R2 = round(R2, -1),
+	R3 = round(R3*100, -1),
+	R4 = round(R4, -1),
+	R6 = round(R6, -1),
+	R7 = round(R7, -1),
+	R9 = round(R9, 1),
+	R10 = round(R10, 1),
+	C2 = round(C2*3, 0),
+	C1 = round(C1, 0),
+	E_0_d = round(E_0/2, 0),
+	E_0 = round(E_0, 0),
+	C_pn = round(C_pn, 1),
+	C3 = round(C3, 0),
+	)
+open('schemes/thermo_{0}_{1}.CIR'.format(thermo, group_pic),'wb').write(out_c)
+
+print(R9, round(C1, 0))
 
 	#3_1
 #formula 5_2
@@ -266,4 +291,4 @@ for name in names:
 	write_formula(name, template)
 
 
-print('all right')      
+print('all right', round(58.25, -1))      

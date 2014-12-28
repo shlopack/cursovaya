@@ -1,5 +1,18 @@
 \textbf{\subsection{Расчет оконечного каскада}}
 \vspace{1em}
+
+Оконечный каскад представляет собой элемент усиления мощности схемы УМ, выполненный на транзисторах n-p-n (VT4) и p-n-p (VT5), представляющих собой двухтактный каскад. Для достижения усиления мощности транзисторы VT4 и VT5 работают в режиме B, за счет которого достигается большой КПД, т.к. ток в выходной цепи протекает только в течение половины периода. За счет включения в выходном каскаде двух транзисторов: n-p-n и p-n-p, достигается прохождение в выходной цепи сигнала в течение всего периода, что способствует работе каскада в непрерывном режиме. 
+
+\begin{figure}[!htbp]
+    \center{\includegraphics[width=0.23\linewidth]{picture_ok}}
+    \caption{Схема оконечного каскада}
+    \label{figure:p2_3}
+  \end{figure}
+
+Резисторы R9 и R10, включенные в цепи эмиттеров транзисторов, представляют местную обратную связь. \par
+Усиление по мощности достигается за счет усиления по току.
+
+
 \subsubsection{Определяем амплитуду напряжения и тока на нагрузке}
 
 \begin{equation}
@@ -223,14 +236,15 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
 
 \begin{table}[htbp]
 \caption{Режимы работы транзисторов}
-\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline 
-  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+   & $I_\text{0К}$ & $I_\text{0б}$& $U_\text{0Б}$ & $U_\text{0К}$&  $I_{\text{Км}}$  & $I_{\text{Бм}}$& $U_{\text{км}}$, B & $P_{\text{к}}$ & K\\ 
+  & мА & мА& В & В & мА & мА & B & мВт & \\
 \hline 
-VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
+КТ127А-1 & 1 & 0.03 & 0.7 & 5 & 50 & 1.66 & 25 & 15 & 0.99 \\
 \hline 
-VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
-\hline 
+КТ215Д-1 & 0.04 & $5\cdot10^{-4}$  & 0.7 & 1 & 50 & 0.63 & 30 & 50 & 27.2 \\
+\hline
 \end{tabular} 
 \end{center}
 \end{table}

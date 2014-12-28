@@ -4,6 +4,13 @@
 Предоконечный каскад, как и входной, являются усилителями напряжения до уровня, необходимого в непосредственном усилителе мощности, выполненном на оконечном каскаде, а также для согласования входного сигнала с входом оконечного каскада. Поэтому в предоконечном каскаде не ставится задача усиления мощности и он работает в режиме А, с КПД порядка 25\%. В этом режиме ток в выходной цепи протекает в период всего действия сигнала. Режим А дает возможность получения максимальной амплитуды выходного сигнала с минимальными искажениями. Воздействие на низкоомную нагрузку RН сигнала большой амплитуды приводит к значительному увеличению КПД усилителя и его мощности.
 За счет включения в коллекторную цепь предоконечного каскада, выполненного по схеме с общим эмиттером, динамической нагрузки получаем большой коэффициент усиления по напряжению. \par
 Каскад охвачен местной положительной ОС, что дает возможность увеличения коэффициента усиления K, но уменьшения полосы пропускания.\par
+
+\begin{figure}[!htbp]
+    \center{\includegraphics[width=0.23\linewidth]{picture_pk}}
+    \caption{Схема предоконечного каскада}
+    \label{figure:p2_4}
+  \end{figure}
+
 Таким образом, основные особенности каскада предварительного усиления в том, что за счет работы в режиме А, он обеспечивает минимальные искажения, при достаточно усилении амплитуды сигнала. Включение в выходную цепь динамического сопротивления позволяет увеличить коэффициент усиления K в десятки раз.\par
 
 
@@ -83,8 +90,6 @@
 \hline 
 VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
 \hline 
-VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
-\hline 
 \end{tabular} 
 \end{center}
 \end{table}
@@ -152,22 +157,19 @@ VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k
 \hline 
 VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
 \hline 
-VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
-\hline 
 \end{tabular} 
 \end{center}
 \end{table}
 
 \begin{table}[htbp]
 \caption{Режимы работы транзистора}
-\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
 \hline 
-  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+   & $I_\text{0К}$ & $I_\text{0б}$& $U_\text{0Б}$ & $U_\text{0К}$&  $I_{\text{Км}}$  & $I_{\text{Бм}}$& $U_{\text{км}}$, B & $P_{\text{к}}$ & K\\ 
+  & мА & мА& В & В & мА & мА & B & мВт & \\
 \hline 
-VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
-\hline 
-VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
-\hline 
+КТ127А-1 & 1 & 0.03 & 0.7 & 5 & 50 & 1.66 & 25 & 15 & 0.99 \\
+\hline
 \end{tabular} 
 \end{center}
 \end{table}
