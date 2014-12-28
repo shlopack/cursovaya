@@ -35,8 +35,6 @@ R5, R4 и C1 – цепь обратной связи. По постоянном
 \input{formulas/4_2}
 \end{equation}
 
-тут типо таблица ,но я их не умею делать априори
-
 \subsubsection{Выбор сопротивления $R_{\text{2}}$:}
 \begin{equation}
 \label{eq:equation4_3}
@@ -189,9 +187,9 @@ R_{\text{ВХВК}}=\dfrac{R_1 \cdot (2 h_{11}+R_4) \cdot F}{R_1+(2 \cdot h_{11}
 \caption{Параметры выбора транзистора}
 \begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline 
-  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+  & тип &  $I_{\text{к}}$ доп, А & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
 \hline 
-VT1/2 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
+VT1/2 & n-p-n &  \input{formulas/2.4_i_k} & $50 \ldots 350$ & \input{formulas/2.4_f}\\ 
 \hline 
 \end{tabular} 
 \end{center}
@@ -206,7 +204,7 @@ VT1/2 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u
    & $I_\text{0К}$ & $I_\text{0б}$& $U_\text{0Б}$ & $U_\text{0К}$&  $I_{\text{Км}}$  & $I_{\text{Бм}}$& $U_{\text{км}}$, B & $P_{\text{к}}$ & K\\ 
   & мА & мА& В & В & мА & мА & B & мВт & \\
 \hline 
-КТ127А-1 & 1 & 0.03 & 0.7 & 5 & 50 & 1.66 & 25 & 15 & 0.99 \\
+КТ315Б & 1 & 0.02 & 0.6 & 10 & 100 & 2 & 20 & 150 & 5000 & 171 \\
 \hline
 \end{tabular} 
 \end{center}

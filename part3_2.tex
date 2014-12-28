@@ -114,20 +114,6 @@
   \end{equation} 
   % subsubsection критерии_выбора_транзистора_ (end)
 
-\begin{table}[htbp]
-\caption{Характеристики выбранного транзистора}
-\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline 
-  & тип & $P_{\text{к}}$ доп, Вт & $I_{\text{к}}$ доп, А & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
-\hline 
-VT4 & n-p-n & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21}\\ 
-\hline 
-VT5 & p-n-p & \input{formulas/p_k}  & \input{formulas/i_k} & \input{formulas/u_k} & \input{formulas/h_21} & \input{formulas/f_h_21} \\ 
-\hline 
-\end{tabular} 
-\end{center}
-\end{table}
-
 Расчетный параметр h21:
 \begin{equation}
    \label{eq:equation6_15}
@@ -181,7 +167,7 @@ R_{\text{ВХ Т}}=h_{11}+(1+h_{21})\cdot R_{\text{ЭН}}=h_{21} \cdot h_{\text{
 R_{\text{ВХ Т}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
 \end{equation*}
 
-\subsubsection{Итоговые данные второго каскада предварительного усиления:}
+\subsubsection{Итоговые данные каскада предварительного усиления:}
 
 
 \begin{table}[htbp]
@@ -190,9 +176,7 @@ R_{\text{ВХ Т}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
 \hline 
   & тип & $P_{\text{к}}$ доп, мВт & $I_{\text{к}}$ доп, мА & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
 \hline 
-VT4 & n-p-n & \input{formulas/3_p_k_1}  & \input{formulas/3_i_k_1} & \input{formulas/3_u_k} & 60 & \input{formulas/3_f_h}\\ 
-\hline 
-VT5 & p-n-p & \input{formulas/3_p_k_2}  & \input{formulas/3_i_k_2} & \input{formulas/3_u_k} & 80 & \input{formulas/3_f_h} \\ 
+VT1  & n-p-n & \input{formulas/3_p_k_1}  & \input{formulas/3_i_k_1} & \input{formulas/3_u_k} & 60 & \input{formulas/3_f_h}\\ 
 \hline 
 \end{tabular} 
 \end{center}
@@ -207,7 +191,7 @@ VT5 & p-n-p & \input{formulas/3_p_k_2}  & \input{formulas/3_i_k_2} & \input{form
 \hline 
 КТ127А-1 & 1 & 0.03 & 0.7 & 5 & 50 & 1.66 & 25 & 15 & 0.99 \\
 \hline 
-КТ215Д-1 & 0.04 & $5\cdot10^{-4}$  & 0.7 & 1 & 50 & 0.63 & 30 & 50 & 27.2 \\
+КТ127Б-1 & 1  &  0.01  &  0.6  & 5  & 20 &   0.22  &  20  &  15  &  13  &  0.98 \\
 \hline
 \end{tabular} 
 \end{center}
