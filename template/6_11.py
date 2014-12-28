@@ -1,0 +1,1 @@
+template = 'P_{\\text{К доп}} \geq (1.1 \ldots 1.3) P_{\\text{К}} = 1.3 \cdot %.1f = %.1f~\\text{мВт};'%(P_k,P_kd)

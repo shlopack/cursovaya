@@ -1,0 +1,1 @@
+template = 'I_{\\text{К доп}} \geq (1.1 \ldots 1.3)(I_{\\text{0К}} + I_{\\text{Кm}}) = 1.3 \cdot %.1f + %.4f}) = %.2f~\\text{мА}; '%(I_ok,I_km,I_kd)

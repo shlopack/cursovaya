@@ -1,0 +1,1 @@
+template = 'P_{\\text{К}} = U_{\\text{кэ}} \cdot I_{\\text{0К}} = %.0f \cdot %.1f = %.0f ~\\text{мВт}. '%(U_ke,I_ok,P_k)

@@ -1,0 +1,1 @@
+template = 'f_{h_{21}} \geq (20 \ldots 30) f_{\\text{в}} = 30 \cdot %.0f = %.0~\\text{кГц}'%(f_h,fh_21)

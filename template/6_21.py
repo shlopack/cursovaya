@@ -1,0 +1,1 @@
+template = 'U_{\\text{ВХ}}=\dfrac {U_{\\text{Н}}}{K}=%.0f /%.2f= %.1f~\\text {мВ}'%(U_n,K,U_vh)
