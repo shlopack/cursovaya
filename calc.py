@@ -24,6 +24,13 @@ with open('data/data.csv', newline='') as csvfile:
         T_max = float(row[9])
         group = row[10]
 
+
+thermo = 1
+
+if (group == '0' or group == '1'):
+	group_pic = 2
+else:
+	group_pic = 1
 #calc formulas
 K_e = math.sqrt(P_n*R_n)/E_g
 F = 0.15/K_g
@@ -38,6 +45,8 @@ names = [
 	'1_1',
 	'1_2',
 	'1_3',
+	'thermo',
+	'all_scheme'
 ]
 for name in names:
 	command = open('template/{0}.py'.format(name), 'rb').read()
@@ -133,14 +142,14 @@ h_11_1 = (1 + h_21_1)*0.025/I_0k1
 R_vhvk = (R1 * (2*h_11_1 + R4) * F) / (R1 + (2*h_11_1 + R4) * F)
 
 
-C2 = (R2 + R_vh_3) / (2*math.pi*f_h*K_pok * R2 * R_vh_3 * R3) * math.pow(10, 12)
+C2 = (R2 + R_vh_3) / (2*math.pi*f_h*K_pok * R2 * R_vh_3 * R3 * 10) * math.pow(10, 12)
 C1 = 1/(2*math.pi * f_l * R4 * math.sqrt(M * M - 1)) * math.pow(10, 6)
 
 K_um = 1 / beta
 K_um_1 = K_vk * K_pok * K_ok / (1 + K_p)
 U_vhvk = U_nm / K_um
 
-
+print(C2,K_pok, R_vh_3, R3)
 names = ['2_1', '2_2', '2_3', '2_4', '2_5', '2_6', '2_7', '2_8',
 '2_9', '2_10', '2_11', '2_14', '2_15', '2_16', '2_17', '2_18',
 '2_19', '2_20', '2_21', '2_22', '3_1', '3_2', '3_3', '3_4', '3_5',
@@ -214,6 +223,7 @@ R3 = (E_0p - U_ke - 3.6) / I_ok
 I_km = U_n / (R3)
 
 R_en = R_n * R_e / (R_n + R_e)
+
 P_k = U_ke * I_ok
 P_kd = 1.3*P_k
 
@@ -234,6 +244,18 @@ U_vh = U_n/K
 R_vht = 89 + (1+h21)*R_en
 R_vh = 1/(1/R_vht + 1/R1 + 1/R2)
 
+export = [
+['3_p_k_1', P_kd*1000, '%.2f'],
+['3_p_k_2', P_k*1000, '%.2f'],
+['3_i_k_1', I_kd*1000, '%.2f'],
+['3_i_k_2', (I_ok + I_km)*1000, '%.2f'],
+['3_u_k', U_ke_, '%.2f'],
+['3_f_h', fh_21/1000, '%.2f'],
+]
+
+for var in export:
+	open('formulas/{0}.tex'.format(var[0]),'wb').write((var[2]%(var[1])).encode('utf-8'))
+
 names = ['5_2', '5_4', '5_5', '5_6', '5_7', '5_8', '5_9', '5_10',
 '5_11', '5_12', '5_13', '5_14', '5_15', '5_16', '5_17', '5_18', '5_19',
 '6_1', '6_2', '6_3', '6_4', '6_5', '6_6', '6_7', '6_8', '6_9']
@@ -243,5 +265,5 @@ for name in names:
 	exec(command)
 	write_formula(name, template)
 
-print(K, R_vh)
+
 print('all right')      

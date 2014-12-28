@@ -174,6 +174,34 @@ R_{\text{ВХ Т}}=89 \cdot 50+90 \cdot 2800 =256~\text{кОм}
 \end{equation*}
 
 \subsubsection{Итоговые данные второго каскада предварительного усиления:}
-табличка
-табличка
+
+
+\begin{table}[htbp]
+\caption{Параметры выбора транзисторов }
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+  & тип & $P_{\text{к}}$ доп, мВт & $I_{\text{к}}$ доп, мА & $U_{\text{к}}$ доп, В & $h_{21}$ &  $f_{h_{21}}$, кГц \\ 
+\hline 
+VT4 & n-p-n & \input{formulas/3_p_k_1}  & \input{formulas/3_i_k_1} & \input{formulas/3_u_k} & 60 & \input{formulas/3_f_h}\\ 
+\hline 
+VT5 & p-n-p & \input{formulas/3_p_k_2}  & \input{formulas/3_i_k_2} & \input{formulas/3_u_k} & 80 & \input{formulas/3_f_h} \\ 
+\hline 
+\end{tabular} 
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Режимы работы транзисторов}
+\begin{center}\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+   & $I_\text{0К}$ & $I_\text{0б}$& $U_\text{0Б}$ & $U_\text{0К}$&  $I_{\text{Км}}$  & $I_{\text{Бм}}$& $U_{\text{км}}$, B & $P_{\text{к}}$ & K\\ 
+  & мА & мА& В & В & мА & мА & B & мВт & \\
+\hline 
+КТ127А-1 & 1 & 0.03 & 0.7 & 5 & 50 & 1.66 & 25 & 15 & 0.99 \\
+\hline 
+КТ215Д-1 & 0.04 & $5\cdot10^{-4}$  & 0.7 & 1 & 50 & 0.63 & 30 & 50 & 27.2 \\
+\hline
+\end{tabular} 
+\end{center}
+\end{table}
 
